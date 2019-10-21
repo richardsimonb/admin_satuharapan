@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+    
+    <title>Ms And Mr Speedy</title>
+    <!-- Developement & Maintenance by RedWhite Solutions -->
+    <meta name="author" content="RedWhite Solutions" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="application-name" content="Ms And Mr Speedy" />
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Le styles -->
+    <link href="{$tplpath}css/bootstrap.css" rel="stylesheet" />
+    <link href="{$tplpath}css/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="{$tplpath}css/supr-theme/jquery.ui.supr.css" rel="stylesheet" type="text/css" />
+    <link href="{$tplpath}css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="{$tplpath}plugins/uniform/uniform.default.css" type="text/css" rel="stylesheet" />
+
+    <!-- Main stylesheets -->
+    <link href="{$tplpath}css/main.css" rel="stylesheet" type="text/css" /> 
+    <link href="{$tplpath}img/favicon.ico" rel="icon" type="image/x-icon" />
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <link type="text/css" href="{$tplpath}css/ie.css" rel="stylesheet" />
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="{$tplpath}images/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{$tplpath}images/apple-touch-icon-144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{$tplpath}images/apple-touch-icon-114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{$tplpath}images/apple-touch-icon-72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="{$tplpath}images/apple-touch-icon-57-precomposed.png" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+      
+    <body class="loginPage">
+
+    <div class="container-fluid">
+
+        <div id="header">
+
+            <div class="row-fluid">
+                <!--
+                <div class="navbar">
+                    <div class="navbar-inner">
+                      <div class="container">
+                            <a class="brand" href="#">&nbsp;<span class="slogan">&nbsp;</span></a>
+                      </div>
+                    </div><!-- /navbar-inner -->
+           <!--</div> --><!-- /navbar -->
+                  
+                
+
+            </div><!-- End .row-fluid -->
+
+        </div><!-- End #header -->
+
+    </div><!-- End .container-fluid -->    
+
+    <div class="container-fluid">
+
+        <div class="loginContainer">
+            <form class="form-horizontal" id="loginForm" />
+                <div class="form-row row-fluid">
+                    <div class="span12">
+                        <div class="row-fluid">
+                            <label class="form-label span12" for="username">
+                                Username:
+                                <span class="icon16 icomoon-icon-user-2 right gray marginR10"></span>
+                            </label>
+                            <input class="span12" id="username" type="text" name="username" value="" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row row-fluid">
+                    <div class="span12">
+                        <div class="row-fluid">
+                            <label class="form-label span12" for="password">
+                                Password:
+                                <span class="icon16 icomoon-icon-locked right gray marginR10"></span>
+                                <span class="forgot"><a href="#">Forgot your password?</a></span>
+                            </label>
+                            <input class="span12" id="password" type="password" name="password" value="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row row-fluid">                       
+                    <div class="span12">
+                        <div class="row-fluid">
+                            <div class="form-actions">
+                            <div class="span12 controls">
+                                <input type="checkbox" id="keepLoged" value="Value" class="styled" name="logged" /> Keep me logged in
+                                <button type="submit" class="btn btn-info right" id="loginBtn"><span class="icon16 icomoon-icon-enter white"></span> Login</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+
+            </form>
+        </div>
+
+    </div><!-- End .container-fluid -->
+    <!-- Footer -->
+    <footer>
+        <div id="versionBar" >
+          <div class="copyright" > &copy; Copyright 2012  All Rights Reserved <span class="tip"><!--<a  href="#" title="Digital Marketing" >&nbsp;</a>--> </span> </div>
+          <!-- // copyright-->
+        </div>
+    </footer>
+    <!-- Le javascript
+    ================================================== -->
+    <script type="text/javascript" src="{$tplpath}js/jquery.js"></script>
+    <script type="text/javascript" src="{$tplpath}js/bootstrap.js"></script>  
+    <script type="text/javascript" src="{$tplpath}plugins/touch-punch/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="{$tplpath}plugins/ios-fix/ios-orientationchange-fix.js"></script>
+    <script type="text/javascript" src="{$tplpath}plugins/validate/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="{$tplpath}plugins/uniform/jquery.uniform.min.js"></script>
+
+     <script type="text/javascript">
+        // document ready function
+        $(document).ready(function() {
+            $("input, textarea, select").not('.nostyle').uniform();
+            $("#loginForm").validate({
+                rules: {
+                    username: {
+                        required: true,
+                        minlength: 4
+                    },
+                    password: {
+                        required: true,
+                        minlength: 5
+                    }  
+                },
+                messages: {
+                    username: {
+                        required: "Fill me please",
+                        minlength: "My name is bigger"
+                    },
+                    password: {
+                        required: "Please provide a password",
+                        minlength: "My password is more that 5 chars"
+                    }
+                }   
+            });
+        });
+    </script>
+    </body>
+</html>

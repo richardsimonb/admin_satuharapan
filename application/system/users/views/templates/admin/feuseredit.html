@@ -1,0 +1,21 @@
+<div class="grid_4">
+	<div class="da-panel">
+    	<div class="da-panel-header">
+        	<span class="da-panel-title">
+                <img src="images/icons/color/text_signature.png" alt="" />
+                Edit User
+            </span>
+        </div>
+        <div class="da-panel-content">
+            {$this->render('partial/alert.html')}
+        	<form id="userform" class="da-form" action="" method="post" style="padding-top:23px;">
+                {$this->render('partial/userform.html')}
+                <div class="da-button-row">
+                    <a href="{$baseUrl}/users/admin" class="da-button gray left"> Back</a>
+                    <input type="reset" value="Reset" class="da-button gray left" />
+                	<input type="submit" value="Update" class="da-button pink" name="update"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

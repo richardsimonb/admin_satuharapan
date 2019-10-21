@@ -1,0 +1,22 @@
+<script src="{$tplpath}js/multiselect/src/jquery.multiselect.js"></script>
+<script src="{$tplpath}js/multiselect/src/jquery.multiselect.filter.min.js"></script>
+
+<link rel="stylesheet" href="{$tplpath}js/multiselect/jquery.multiselect.css" />
+<link rel="stylesheet" href="{$tplpath}js/multiselect/jquery.multiselect.filter.css" />
+
+<select multiple="multiple" name="related[]" style="width: 400px; height: 400px;" id="multiselect">                    	
+    {foreach from=$news item=row}
+        <option value="{$row.uid}"  {if in_array($row.uid, $newsrel)}selected="selected"{/if}>{$row.title}</option>
+    {/foreach}
+</select>
+{literal}
+<script type="text/javascript">
+$("#multiselect")
+   .multiselect({
+       multiple: false,
+      noneSelectedText: 'Select news',
+      selectedList: 10
+   })
+   .multiselectfilter();
+</script>
+{/literal}

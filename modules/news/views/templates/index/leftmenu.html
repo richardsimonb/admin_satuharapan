@@ -1,0 +1,22 @@
+<div class="news-cat-left">
+<ul>
+    <li><a href="{$baseUrl}/news">All</a></li>
+    {foreach from=$categories item=cat}
+    {if $cat.uid eq 39}
+        {if $smarty.session.Default.user.usergroup ne 1}
+            <li><a href="{$baseUrl}/news/index/index/category/{$cat.uid}">{$cat.title}</a></li>
+        {/if}
+    {else}
+        <li><a href="{$baseUrl}/news/index/index/category/{$cat.uid}">{$cat.title}</a>
+            {if isset($cat.sub)}
+                <ul>
+                {foreach from=$cat.sub item=catsub}
+                    <li><a href="{$baseUrl}/news/index/index/category/{$catsub.uid}">{$catsub.title}</a></li>
+                {/foreach}
+                </ul>
+            {/if}    
+        </li>
+    {/if}
+    {/foreach}
+</ul>
+</div>

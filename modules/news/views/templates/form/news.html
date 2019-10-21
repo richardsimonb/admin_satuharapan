@@ -1,0 +1,308 @@
+<script src="{$tplpath}js/multiselect/src/jquery.multiselect.js"></script>
+<script src="{$tplpath}js/multiselect/src/jquery.multiselect.filter.min.js"></script>
+
+<link rel="stylesheet" href="{$tplpath}js/multiselect/jquery.multiselect.css" />
+<link rel="stylesheet" href="{$tplpath}js/multiselect/jquery.multiselect.filter.css" />
+<ul id="myTab" class="nav nav-tabs">
+          <li class="active"><a href="#general" data-toggle="tab">General</a></li>
+          <li><a href="#special" data-toggle="tab">Special</a></li>
+          <li><a href="#media" data-toggle="tab">Media</a></li>
+          <li><a href="#relation" data-toggle="tab">Categories & Relations </a></li>
+          <li><a href="#access" data-toggle="tab">Access </a></li>
+        </ul>
+        
+        <div id="myTabContent" class="tab-content">
+          <div class="tab-pane fade in active" id="general">   
+            {if $smarty.session.Default.user.usergroup eq 3}
+            <div class="control-group">
+                <label class="control-label" >Hidden</label>
+                <div class="controls">
+                    {if $params.action eq 'new'}
+                        <input type="checkbox" name="f[hidden]" value="1" checked="" />
+                    {else}
+                        <input type="checkbox" name="f[hidden]" value="1" {if isset($detail) && $detail.hidden eq 1}checked=""{/if} />
+                    {/if}    
+                </div>
+            </div>
+			<div class="control-group">
+                <label class="control-label" >Publish Special Date</label>
+                <div class="controls">
+                    {if $params.action eq 'new'}
+                        <input type="checkbox" name="f[publish]" value="1" />
+                    {else}
+                        <input type="checkbox" name="f[publish]" value="1"/>
+                    {/if}     
+                </div>
+            </div>
+            {/if}
+            <div class="control-group">
+                <label class="control-label" >Title</label>
+                <div class="controls">
+                    <input type="text" class="span5" value="{if isset($detail)}{$detail.title}{/if}" name="f[title]" required id="title">
+                </div>
+            </div>
+            
+            <!-- Penambahan Sub header di CMS by : ben-->
+           <div class="control-group">
+                <label class="control-label" >Subheader</label>
+                <div class="controls">
+                    
+                    <textarea name="f[short]">{if isset($detail)}{$detail.short}{/if}</textarea>
+                    <!--<textarea name="f[short]" class="ckeditor" id="editor1" required>{if isset($detail)}{$detail.short}{/if}</textarea>-->
+                </div>
+            </div>
+            
+            
+            <div class="control-group">
+                <label class="control-label" >Content</label>
+                <div class="controls">
+                    <textarea name="f[bodytext]" class="ckeditor" id="editor1" required>{if isset($detail)}{$detail.bodytext}{/if}</textarea>
+                </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="special">
+            <div class="control-group">
+                <label class="control-label" >Date/Time:</label>
+                <div class="controls">
+                    <input type="text" class="spa5 datetimepicker" name="f[datetime]" value="{if isset($detail)}{$detail.datetime|date_format:"%d-%m-%Y %H:%M"}{/if}">
+                </div>
+            </div>
+           
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">Keywords (,)</label>
+                <div class="controls">
+                	<textarea name="f[keywords]">{if isset($detail)}{$detail.keywords}{/if}</textarea>	
+                	
+                </div>
+            </div>
+            
+             
+                 <div class="control-group" {if $smarty.session.Default.user.usergroup eq 1}style="display:none;" {/if}>
+                    <label class="control-label" >Authors</label>
+                    <div class="controls">
+                    	<select name="f[cruser_id]" class="singgle-select">
+                            {foreach from=$authors item=author}
+                            <option value="{$author.uid}" {if $cruser_id eq $author.uid}selected=""{/if} >{$author.name}</option>
+                            {/foreach}
+                        </select>	
+                    </div>
+                </div>
+            
+          </div>
+          <div class="tab-pane fade" id="media">           
+            <table class="table table-bordered">
+                {if isset($detail)}
+                    <tr>
+                        <th>Image</th>
+                        <th>Filename</th>
+                        <th>Action</th>
+                    </tr>
+                    {foreach from=$images item=img name=foo}
+                        <tr class="row-{$smarty.foreach.foo.iteration}">
+                            <td>
+                                <a href="/uploads/pics/{$img}" class="image-news">
+                                <img src="/uploads/pics/{$img}" width="100"/>
+                                <!-- <img src="{$baseUrl}/news/index/image/filename/{$img}/width/100"/> -->
+                                </a>
+                                <input type="hidden" name="filename[]" value="{$img}" />
+                            </td>
+                            <td>{$img}</td>
+                            <td><a href="{$baseUrl}/news/index/delete/uid/{$detail.uid}/filename/{$img}" class="btn btn-danger remove" id="row-{$smarty.foreach.foo.iteration}">delete</a></td>
+                        </tr>
+                    {/foreach}
+                {/if}
+            </table>
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">Images</label>
+                <div class="controls">
+                    <input type="file" class="" name="image" >
+                </div>
+            </div>
+            <h5><i>use the enter key to separate from one another</i></h5>
+            <div class="control-group">
+                <label class="control-label" >Caption</label>
+                <div class="controls">
+                	<textarea name="f[imagecaption]">{if isset($detail)}{$detail.imagecaption}{/if}</textarea>                    
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" >Img alttext</label>
+                <div class="controls">
+                	<textarea name="f[imagealttext]">{if isset($detail)}{$detail.imagealttext}{/if}</textarea>                    
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" >Img titletext</label>
+                <div class="controls">
+                	<textarea name="f[imagetitletext]">{if isset($detail)}{$detail.imagetitletext}{/if}</textarea>                    
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" >Links</label>
+                <div class="controls">
+                	<textarea name="f[links]">{if isset($detail)}{$detail.links}{/if}</textarea>                    
+                </div>
+            </div>
+          </div>
+          
+          <div class="tab-pane fade" id="relation">
+           <div class="control-group">
+                <label class="control-label" >Category</label>
+                <div class="controls">
+                    <select name="category[]" style="width: 400px; height: 400px;" class="multiselect" multiple="multiple">
+                        {foreach from=$categories item=cat}
+                            <option value="{$cat.uid}"
+                                            {if isset($detail)}
+                                              {if in_array($cat.uid, $newsCategory)}selected="selected"{/if}
+                                            {/if}>
+                                            {$cat.title}</option>
+                                            
+                                {if isset($cat.sub)}
+                                    {foreach from=$cat.sub item=catsub}
+                                        <option  value="{$catsub.uid}"
+                                            {if isset($detail)}                                              
+                                              {if in_array($catsub.uid, $newsCategory)}selected="selected"{/if}
+                                            {/if}
+                                        >--{$catsub.title}</option>
+                                    {/foreach}
+                                {/if}    
+                            
+                        {/foreach}
+                    </select>
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <label class="control-label" >Related</label>
+                <div class="controls">
+                	 <p>
+                  <input type="hidden" class="bigdrop" id="e6" style="width:600px" value="16340"/>
+              </p>
+                   <select multiple="multiple" name="related[]" style="width: 400px; height: 400px;" class="multiselect">                    	
+                        {foreach from=$news item=row}
+                            <option value="{$row.uid}"  {if in_array($row.uid, $newsrel)}selected="selected"{/if}>{$row.title}</option>
+                        {/foreach}
+                    </select>
+                    
+                </div>
+            </div>
+            
+          </div>
+          
+          <div class="tab-pane fade" id="access">
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">Start</label>
+                <div class="controls">
+                    <input type="text" class="datetimepicker" value="{if isset($detail) && $detail.starttime !=0}{$detail.starttime|date_format:"%d-%m-%Y %H:%M"}{/if}" name="f[starttime]">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">Stop</label>
+                <div class="controls">
+                    <input type="text" class="datetimepicker" value="{if isset($detail) && $detail.endtime !=0}{$detail.endtime|date_format:"%d-%m-%Y %H:%M"}{/if}" name="f[endtime]">
+                </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="modal-footer">
+        	<a href="{$baseUrl}/news/index/preview/uid/{$params.uid}" class="btn btn-warning fancybox" id="preview" style="display: none;">Preview</a>
+        	<input  type="hidden" id="show-preview" value="{if isset($params.preview)}{$params.preview}{else}0{/if}" name="preview"/>
+            <input  type="hidden"  value="{if isset($detail)}{$detail.redaktur_uid}{else}0{/if}" name="redaktur_uid"/>
+            <input type="button" class="btn btn-warning " value="Preview" id="btn-preview"  />            
+            <input type="button" class="btn btn-primary " value="SAVE" id="btn-save" />
+            
+            
+		</div>
+
+{literal}		
+<script>
+
+ function cekValid()
+    {
+        var valid = 0;
+        if($("#title").val() != '')
+        {
+            valid = 1;
+        }
+      
+        return valid;
+        
+    }
+
+$(document).ready(function(){
+    
+   
+    
+   // var  baseUrl = "{/literal}{$baseUrl}{literal}/";
+   if($("#show-preview").val() == 1)
+   {
+    $("#preview").trigger("click");
+   }
+   $("#btn-preview").click(function(){
+        $("#show-preview").val(1);
+        if(cekValid())
+        {
+            $("#form-news").submit();
+        } else {
+            alert("Title dan content harus di isi");
+        }
+        
+   }); 
+   $("#btn-save").click(function(){
+        $("#show-preview").val(0);
+        if(cekValid())
+        {
+            $("#form-news").submit();
+            //include "../../../autotweetsatuharapan/post_tweet.php";
+            
+        } else {
+            alert("Title dan content harus di isi");
+        }
+   }); 
+   
+   $("a.image-news").fancybox({
+		'titleShow'     : false
+	});
+    
+   $(".remove").click(function(){
+        console.log(this.id);
+        $("." + this.id).fadeOut(500, function() {
+			
+		});
+		$("." + this.id).remove();
+        var datastring = "ok";
+        $("#loading_overlay").show();    
+        $.ajax({                        
+            url: $(this).attr("href"),
+            type: 'POST',
+            data: datastring,
+            async: true,
+            success: function (data) {                     
+                    $("#loading_overlay").hide();           
+                },           
+            });       
+        return false;
+   }); 
+});
+   
+</script>
+{/literal}
+
+{literal}
+<script type="text/javascript">
+$(".multiselect")
+   .multiselect({
+      noneSelectedText: 'Select',
+      selectedList: 10
+   })
+   .multiselectfilter();
+$(".singgle-select")
+   .multiselect({
+      multiple: false,
+      noneSelectedText: 'Select',
+      selectedList: 10
+   })
+   .multiselectfilter();
+</script>
+{/literal}

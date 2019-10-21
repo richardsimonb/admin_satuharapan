@@ -1,0 +1,33 @@
+<div class="grid_4">
+	<div class="da-panel">
+    	<div class="da-panel-header">
+        	<span class="da-panel-title">
+                <img src="images/icons/color/text_signature.png" alt="" />
+                New  User
+            </span>
+        </div>
+        <div class="da-panel-content">
+            {$this->render('partial/alert.html')}
+        	<form id="userform" class="da-form" action="" method="post" style="padding-top:23px;">
+                {$this->partial('partial/userform.html')}
+                <div class="da-form-row">
+                <label>Password</label>
+                    <div class="da-form-item large">
+                        <input id="password" type="password" name="password" />
+                    </div>
+                </div>
+                <div class="da-form-row">
+                    <label>Confirm Password <span class="required">*</span></label>
+                    <div class="da-form-item large">
+                        <input type="password" name="confirm_password" id="confirm_password" />
+                    </div>
+                </div>
+                <div class="da-button-row">
+                    <a href="{$baseUrl}/users/admin" class="da-button gray left"> Back</a>
+                    <input type="reset" value="Reset" class="da-button gray left" />
+                	<input type="submit" value="Insert" class="da-button pink" name="newdata"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

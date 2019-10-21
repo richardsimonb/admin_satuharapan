@@ -1,0 +1,93 @@
+<fieldset class="da-form-inline">
+	<legend>Account Info</legend>
+    <div class="da-form-row">
+        <label>Username <span class="required">*</span></label>
+        <div class="da-form-item large">
+        	<input type="text" name="username" id="username" value="{$user.username}" />
+        </div>
+    </div>
+    <div class="da-form-row">
+        <label>Nicename </label>
+        <div class="da-form-item large">
+        	<input type="text" name="nicename" id="nicename" value="{$user.nicename}"/>
+        </div>
+    </div>
+    <div class="da-form-row">
+        <label>Fullname <span class="required">*</span></label>
+        <div class="da-form-item large">
+        	<input type="text" name="name" id="name" value="{$user.name}"/>
+        </div>
+    </div>
+    <div class="da-form-row">
+        <label>Email <span class="required">*</span></label>
+        <div class="da-form-item large">
+        	<input type="text" name="email" id="email" value="{$user.email}"/>
+        </div>
+    </div>
+    
+    <div class="da-form-row">
+        <label>Birthday </label>
+        <div class="da-form-item large">
+        	<input type="text" name="birthday" id="birthday" value="{$user.birthday}"/>
+        </div>
+    </div>
+    <div class="da-form-row">
+        <label>Gender </label>
+        <div class="da-form-item large">
+        	<select name="gender" id="gender">
+                <option value="">Pilih</option>
+                <option value="male" {if $user.gender eq 'male'}selected=""{/if}>Male</option>
+                <option value="female" {if $user.gender eq 'female'}selected=""{/if}>Female</option>
+            </select>
+        </div>
+    </div>
+    <div class="da-form-row">
+        <label>Phone </label>
+        <div class="da-form-item large">
+        	<input type="text" name="phone" id="phone" value="{$user.phone}" />
+        </div>
+    </div>
+     <div class="da-form-row">
+        <label>Url </label>
+        <div class="da-form-item large">
+        	<input type="text" name="url" id="url" value="{$user.url}"  />
+        </div>
+    </div>
+    
+     <div class="da-form-row">
+        <label>Provider </label>
+        <div class="da-form-item large">
+        	<input type="text" name="provider" id="provider" value="{$user.provider}" />
+        </div>
+    </div>
+    <div class="da-form-row">
+        <label>Provider ID </label>
+        <div class="da-form-item large">
+        	<input type="text" name="provider_id" id="provider_id" value="{$user.provider_id}"  />
+        </div>
+    </div>
+    <div class="da-form-row">
+        <label>Token</label>
+        <div class="da-form-item large">
+        	<input type="text" name="token" id="token" value="{$user.token}" />
+        </div>
+    </div>
+    <div class="da-form-row">
+        <label>Screen Name </label>
+        <div class="da-form-item large">
+        	<input type="text" name="tw_screen_name" id="tw_screen_name" value="{$user.tw_screen_name}"  />
+        </div>
+    </div>
+    <div class="da-form-row">
+        <label>Description</label>
+        <div class="da-form-item large">
+        	<textarea name="description">{$user.description}</textarea>
+        </div>
+    </div>
+     <div class="da-form-row">
+        <label>API Key</label>
+        <div class="da-form-item large">
+        	<input type="text" name="api_key"  disabled="disabled" value="{$user.api_key}"  />
+        </div>
+    </div>
+</fieldset>

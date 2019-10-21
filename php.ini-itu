@@ -1,0 +1,5 @@
+disable_functions = 
+upload_max_filesize = 50M  
+extension=pdo.so
+extension=pdo_mysql.so
+date.timezone = "Asia/Jakarta"

@@ -1,0 +1,1105 @@
+# Webalizer V2.21-02 Incremental Data - 10/16/2012 21:15:02
+2012 10 16 21 15 2
+45048 19606 19 355 80 25 2257110730 16852 177 1
+4 27 4759 2 16
+0 0 0 0 0 0
+4421 457 7457793 2 344 6
+8709 1648 84395094 3 1198 16
+7162 1833 268019306 10 1135 13
+3300 1031 689431427 10 555 30
+41 33 46537584 2 5 2
+0 0 0 0 0 0
+3330 1214 172952362 5 1049 38
+10272 8778 111400963 3 8677 15
+3363 2100 427782239 5 1884 25
+51 15 44520 3 18 3
+50 47 26566125 2 17 2
+0 0 0 0 0 0
+0 0 0 0 0 0
+522 432 107300914 3 343 13
+3827 2018 315222403 4 1627 14
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0
+93 90 52724923 60
+0 0 0 0
+0 0 0 0
+37 33 46537492 3
+0 0 0 0
+0 0 0 0
+0 0 0 0
+328 42 546118 37
+2745 1136 110895348 945
+4601 1765 85370553 1411
+5245 1638 251545454 1317
+2208 737 65719754 453
+2769 1071 191651461 1076
+1935 487 133093036 512
+2640 749 139167168 459
+4258 1141 265394121 702
+4929 1287 209660721 673
+7823 5379 384945012 5273
+4947 3779 100342486 3759
+386 249 54775866 144
+97 23 127340712 27
+6 0 37400104 0
+1 0 401 1
+0
+0
+0
+19606
+0
+0
+0
+0
+0
+300
+0
+1
+206
+0
+18644
+0
+0
+0
+671
+0
+29
+4742
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+800
+0
+0
+49
+0
+0
+# -urls- 
+/tmp/images/captcha/2e17641a5dc328e678ff7ebf1ac214c7.png
+1 1 0 5030 0 0
+/comments/post
+0 46 0 16896 0 0
+/api/comments/5/
+0 1 0 882 0 0
+/templates/backend/js/bootstrap-carousel.js
+0 37 0 38094 0 0
+/templates/frontend/css/images/ui-icons_454545_256x240.png
+1 6 0 17476 0 0
+/templates/frontend/images/bgfooter.png
+1 305 0 209808 0 0
+/templates/frontend/images/profil-default.jpg
+1 34 0 7740 0 0
+/templates/frontend/video/player.smil-3.2.8.swf
+0 31 0 33132 0 0
+/
+0 815 0 9976880 52 24
+/api/comments/6/
+0 1 0 876 0 0
+/templates/backend/plugins/uniform/uniform.default.css
+0 5 620278661492244496 32292 0 0
+/templates/frontend/js/jquery-1.8.0.min.js
+0 175 0 1295770 0 0
+/api/posts/images
+0 32 0 2528 0 0
+/templates/backend/js/bootstrap-tooltip.js
+0 35 0 46176 0 0
+/pemenang/images/pemenang.jpg
+1 2 0 286 0 0
+/templates/backend/plugins/uniform/jquery.uniform.min.js
+0 5 620281410271313936 27969 0 0
+/templates/frontend/images/fblike.jpg
+1 232 0 132615 0 0
+/api/comments/7/
+0 1 0 874 0 0
+/tmp/images/captcha/da7d374763fd70507e215fb6e2be3c39.png
+1 1 0 5118 0 0
+/templates/frontend/js/popup.js
+0 504 0 24604 0 0
+/api/users/images
+0 217 0 17143 0 3
+/api/comments/8/
+0 1 0 874 0 0
+/users/index/logout
+0 10 0 11210 0 0
+/templates/frontend/images/foto.png
+1 143 0 165200 0 0
+/admin
+0 88 0 296719 1 1
+/templates/frontend/css/helveticaneueltstd-bdcn-webfont.ttf
+0 2 0 87928 0 0
+/templates/frontend/images/tweet.jpg
+1 234 0 144365 0 0
+/templates/frontend/images/img-default.jpg
+1 192 0 104843 0 0
+/api/comments/9/
+0 2 0 1774 0 0
+/tmp/images/captcha/f1fe566064947be43d83a90e1bac857e.png
+1 1 0 6359 0 0
+/templates/frontend/css/images/ui-icons_222222_256x240.png
+1 15 0 21845 0 0
+/tmp/images/captcha/b13e8477387e3fb5586a9f7fb0279ad9.png
+1 1 0 3880 0 0
+/templates/frontend/images/bgpopup.png
+1 16 0 2787 0 0
+/templates/frontend/js/bootstrap-alert.js
+0 2 0 37197 0 0
+/templates/frontend/css/images/ui-bg_glass_65_ffffff_1x400.png
+1 2 0 105 0 0
+/templates/frontend/images/ui-bg_gloss-wave_35_f6a828_500x100.png
+1 6 0 7524 0 0
+/users/index/register
+0 24 0 128302 0 0
+/users/index/login/
+0 41 5798494218015997952 219195 1 1
+/templates/frontend/images/banner4.jpg
+1 313 127978989058418 1459343 0 0
+/templates/frontend/js/jquery.speedy.js
+0 449 127978989054318 44873 0 0
+/templates/frontend/video/Dolby-Digital-HD-Test.mp4
+0 334 435459548774 1836881499 0 0
+/templates/backend/plugins/validate/jquery.validate.min.js
+0 5 620280723076546576 64809 0 0
+/templates/frontend/css/images/ui-bg_highlight-soft_100_eeeeee_1x100.png
+1 1 8747227862613044792 90 0 0
+/templates/frontend/images/ui-icons_222222_256x240.png
+1 1 0 4369 0 0
+/posts
+0 5 0 55983 0 0
+/tmp/backup/livenu.zip
+0 2 620300548645584912 55652 0 0
+/templates/frontend/images/piala.jpg
+1 2 0 2514 0 0
+/templates/frontend/video/player.ipad-3.2.11.min.js
+0 210 0 742581 0 0
+/templates/frontend/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+1 15 0 600 0 0
+/templates/frontend/images/btn-kirim.png
+1 276 0 159139 0 0
+/index/play/id/1
+0 15 0 3340 0 0
+/index/play/id/7
+0 1 0 205 0 0
+/api/posts/filter[post_author]
+0 1 0 79 0 0
+/templates/backend/js/bootstrap-transition.js
+0 35 0 10572 0 0
+/templates/frontend/js/jquery.filestyle.pack.js
+0 3 0 2390 0 0
+/posts/index/id/2
+0 6 0 60945 0 0
+/templates/frontend/profile.html
+0 1 0 8866 0 0
+/templates/backend/img/glyphicons-halflings-white.png
+1 2 620288076060557328 17554 0 0
+/templates/frontend//images/piala.jpg
+1 8 0 12570 0 0
+/templates/frontend/css/jquery.ui.theme.css
+0 482 0 565892 0 0
+/users/index/loginfb
+0 9 0 4479 0 0
+/tmp/images/captcha/49c0868325a22c4700698b657e99855b.png
+1 1 0 4794 0 0
+/templates/frontend/images/banner3.jpg
+1 312 0 1368969 0 0
+/templates/backend/img/bg.png
+1 6 620271274148495376 4902 0 0
+/posts/view/id/images/artikel.jpg
+1 2 0 21320 0 0
+/templates/backend/js/bootstrap-alert.js
+0 35 0 14352 0 0
+/api/users/index
+0 1 619381700522147856 3975 0 0
+/api/users/10
+0 32 0 16058 1 0
+/api/users/11
+0 6 0 3258 0 0
+/api/users/14
+0 86 0 44000 0 1
+/templates/frontend/images/video.jpg
+1 104 0 794052 0 0
+/api/users/17
+0 10 620294089014771728 5150 0 0
+/api/posts/gallery
+0 5 0 316459 0 0
+/templates/frontend/js/jquery-tabs.js
+0 338 0 34560 0 0
+/templates/frontend/js/bootstrap-button.js
+0 2 0 37519 0 0
+/templates/frontend/images/logo-footer.png
+1 344 0 331285 0 0
+/index/resize/image/faiz.jpg/size/small
+0 176 0 648183 0 0
+/templates/frontend/images/pemenang.jpg
+1 1 0 6406 0 0
+/templates/backend/js/bootstrap-typeahead.js
+0 35 0 44904 0 0
+/templates/frontend/js/bootstrap-modal.js
+0 2 0 41295 0 0
+/users/account/
+0 2 620267460217536528 8947 0 1
+/users/index/edit
+0 2 620294329532940304 12399 0 0
+/tmp/images/captcha/ba139690125eae5b1c679aa6efc08d11.png
+1 1 0 5025 0 0
+/templates/frontend/css/images/ui-bg_gloss-wave_35_f6a828_500x100.png
+1 1 0 3762 0 0
+/comments/index/id/1
+0 243 0 1398674 1 7
+/templates/frontend/images/speedy.png
+1 515 0 141185 0 0
+/templates/frontend/images/banner2.jpg
+1 259 0 682630 0 0
+/templates/backend/js/bootstrap-tab.js
+0 35 0 20292 0 0
+/profile/index/id/0
+0 1 0 9946 0 0
+/templates/frontend/video/flowplayer.controls-3.2.14.swf
+0 83 0 1266559 0 0
+/templates/backend/js/jquery.js
+0 39 0 663873 0 0
+/profile/index/id/6
+0 4 0 48475 0 0
+/templates/frontend/js/jquery-1.8.2.min.js
+0 75 620268937686286352 1588395 0 0
+/templates/backend/plugins/touch-punch/jquery.ui.touch-punch.min.js
+0 5 620279348687011856 3570 0 0
+/templates/frontend/images/sprite.png
+1 208 0 295742 0 0
+/templates/frontend/css/bootstrap.css
+0 2 0 152933 0 0
+/admin/index/
+0 3 620286701671022608 15477 0 0
+/users/profile/index/id/1
+0 1 620213068751699984 4441 0 0
+/users/index/login
+0 33 0 239760 0 2
+/posts/index/id/images/populer.jpg
+1 18 0 170169 0 0
+/templates/backend/css/supr-theme/jquery.ui.core.css
+0 5 620273610610704400 3954 0 0
+/templates/frontend/images/foto.jpg
+1 1 0 13983 0 0
+/users/index/loginmt
+0 5 0 13709 0 0
+/tmp/media/faiz.jpg
+1 8 0 318477 0 0
+/admin/posts/edit/id/1
+0 2 620293745417388048 17270 0 0
+/templates/frontend/js/jquery-1.4.3.min.js
+0 611 0 5053490 0 0
+/templates/frontend/images/banner1.jpg
+1 259 0 880968 0 0
+/templates/frontend/css/helveticaneueltstd-bdcn-webfont.woff
+0 618 0 381952 0 0
+/templates/frontend/css/jquery-tabs.css
+0 342 0 152424 0 0
+/templates/frontend/images/form-search.png
+1 296 0 133350 0 0
+/templates/frontend/images/btn-view.png
+1 280 0 170893 0 0
+/api/posts/1
+0 301 0 191912 0 0
+/api/posts/2
+0 7 0 10395 0 0
+/templates/backend/js/google-code-prettify/prettify.css
+0 21 0 3268 0 0
+/api/posts/5
+0 1 0 620 0 0
+/api/posts/7
+0 1 0 874 0 0
+/templates/frontend/images/logo-pm.png
+1 340 0 209520 0 0
+/templates/frontend/images/artikel.jpg
+1 1 0 11396 0 0
+/index/resize/image/textimg.jpg/size/small
+0 67 0 313460 0 0
+/templates/frontend/images/tantangan.jpg
+1 2 0 8783 0 0
+/templates/backend/js/bootstrap-modal.js
+0 36 0 39844 0 0
+/templates/frontend/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+1 15 0 505 0 0
+/templates/backend/ico/favicon.ico
+0 1 0 1150 0 0
+/api/posts/a
+0 1 0 79 0 0
+/users/index/logintw/provider/twitter/addto//close/1
+0 4 0 8601 0 0
+/templates/frontend/images/social.png
+1 109 0 81776 0 0
+/templates/frontend/js/player.js
+0 11 0 3122 0 0
+/profile/index/id/images/populer.jpg
+1 123 0 1342183 0 0
+/tmp/images/captcha/6dbe4e319a3198318f6c65f65b71c30c.png
+1 1 0 4493 0 0
+/templates/frontend/css/960.css
+0 861 0 519480 0 0
+/templates/frontend/js/bootstrap-scrollspy.js
+0 2 0 39206 0 0
+/templates/frontend/js/jquery.validate.js
+0 436 0 668491 0 0
+/profile/index/id/images/foto.jpg
+1 23 0 269619 0 0
+/templates/frontend/images/stream.jpg
+1 313 0 362748 0 0
+/images/speedy.png
+1 1 0 938 0 0
+/templates/frontend/video/player.menu-3.2.11.swf
+0 31 0 282624 0 0
+/admin/users/index
+0 2 620292027430469648 36409 0 0
+/templates/frontend/images/bg.png
+1 508 0 27778 0 0
+/templates/backend/js/jquery-1.8.2.js
+0 3 620289622248783888 691403 0 0
+/templates/frontend/upload-artikel.html
+0 2 0 12994 1 0
+/templates/backend/js/default.rwcms.js
+0 3 620288316578725904 813 0 0
+/yogie_pribadi
+0 3 0 2547 1 0
+/templates/frontend/js/bootstrap-tab.js
+0 2 0 38187 0 0
+/templates/backend/css/supr-theme/jquery.ui.theme.css
+0 5 620272511099076624 47718 0 0
+/templates/frontend/js/bootstrap-transition.js
+0 2 0 36567 0 0
+/templates/frontend/js/jquery.ui.core.js
+0 483 0 102600 0 0
+/templates/backend/css/supr-theme/jquery.ui.slider.css
+0 5 620277974297477136 9948 0 0
+/templates/backend/css/bootstrap-responsive.css
+0 38 0 146993 0 0
+/api/comments/
+0 9130 0 8376294 2 24
+/templates/frontend/css/popup.css
+0 505 0 4392 0 0
+/templates/frontend/images/siginsocial.png
+1 59 0 186238 0 0
+/templates/backend/plugins/fancybox/jquery.fancybox.js
+0 57 0 283532 0 0
+/templates/frontend/images/browse.png
+1 2 0 5584 0 0
+/templates/frontend//images/tantangan.jpg
+1 8 0 43915 0 0
+/templates/backend/plugins/fancybox/jquery.fancybox.css
+0 57 0 24384 0 0
+/templates/backend/css/supr-theme/jquery.ui.progressbar.css
+0 5 620276359389773840 6591 0 0
+/templates/frontend/video/player.bitrateselect-3.2.11.swf
+0 31 0 397980 0 0
+/templates/frontend//images/speaker.jpg
+1 8 0 11930 0 0
+/api/comments/10/
+0 1 0 886 0 0
+/api/users/0
+0 1 0 40 0 0
+/api/users/1
+0 46 0 17582 0 0
+/api/users/2
+0 1 0 351 0 0
+/api/users/4
+0 1 0 40 0 0
+/api/users/6
+0 5 0 200 0 0
+/css/style.css
+0 1 0 938 0 0
+/api/comments/11/
+0 2 0 1769 0 0
+/templates/backend/css/main.css
+0 6 620270586953728016 308982 0 0
+/templates/frontend/images/profile.jpg
+1 11 0 5957 0 0
+/templates/frontend/js/bootstrap-popover.js
+0 2 0 37798 0 0
+/api/comments/12/
+0 2 0 1781 0 0
+/templates/backend/plugins/ios-fix/ios-orientationchange-fix.js
+0 5 620280035881779216 4803 0 0
+/templates/frontend/js/bootstrap-dropdown.js
+0 2 0 38780 0 0
+/templates/frontend/plugins/fancybox/fancybox_loading.gif
+1 31 0 15464 0 0
+/index/play/id/
+0 37 0 7220 0 1
+/tmp/images/captcha/2b806e8ae0945ef89b43ce8fd7dea805.png
+1 1 0 5978 0 0
+/api/comments/13/
+0 2 0 1762 0 0
+/templates/frontend/css/images/ui-bg_glass_100_f6f6f6_1x400.png
+1 1 0 104 0 0
+/templates/backend/js/bootstrap-button.js
+0 35 0 16284 0 0
+/templates/backend/js/bootstrap-dropdown.js
+0 36 0 27825 0 0
+/templates/frontend/css/helveticaneueltstd-ltcn-webfont.svg
+0 2 0 107788 0 0
+/templates/frontend/video/flowplayer-3.2.11.min.js
+0 519 0 1380339 0 0
+/templates/frontend/images/ui-bg_glass_100_f6f6f6_1x400.png
+1 8 0 208 0 0
+/templates/frontend/images/btn-upload.png
+1 75 0 30365 0 0
+/tmp/images/dancer.mp4
+0 37 0 119535110 0 0
+/api/comments/14/
+0 2 0 1752 0 0
+/api/comments/1
+0 2 0 80 0 0
+/api/comments/2
+0 1 0 423 0 0
+/templates/frontend/js/jquery.timeago.js
+0 78 0 103341 0 0
+/api/comments/4
+0 1 0 408 0 0
+/tmp/images/captcha/aa7fbb880fa5ee2f1d9cbbcef7aa8d60.png
+1 1 0 5044 0 0
+/templates/backend/css/supr-theme/jquery.ui.supr.css
+0 5 620272270580908048 918 0 0
+/templates/frontend/images/btn-uploading.png
+1 14 0 15765 0 0
+/tmp/images/captcha/ad10be2e7d3e173f1e5f748ffe9041fc.png
+1 1 0 4710 0 0
+/comments/test/
+0 14 0 93023 1 1
+/api/comments/15/
+0 1 0 884 0 0
+/tmp/images/captcha/a46e44f62c59132bc68ddb8544317a83.png
+1 1 0 8213 0 0
+/api/comments
+0 292 0 2204146 0 1
+/templates/backend/css/supr-theme/jquery.ui.datepicker.css
+0 5 620275672195006480 13449 0 0
+/templates/backend/css/supr-theme/jquery.ui.dialog.css
+0 5 620274985000239120 8574 0 0
+/tmp/images/captcha/055e29d763057c58e3275376d6bf978c.png
+1 1 0 4380 0 0
+/templates/frontend/css/images/ui-icons_ffffff_256x240.png
+1 1 0 4369 0 0
+/api/comments/16/
+0 1 0 889 0 0
+/tmp/images/captcha/d8688f6837741b5c05ae6dbb63219dc6.png
+1 1 0 4501 0 0
+/templates/frontend/video/player.bwcheck-3.2.9.swf
+0 31 0 486300 0 0
+/profile/index/id/10
+0 30 0 341858 3 6
+/profile/index/id/11
+0 6 0 46078 0 0
+/profile/index/id/14
+0 3 0 36505 0 0
+/favicon.ico
+0 169 0 156091 0 0
+/api/comments/17/
+0 1 0 876 0 0
+/tmp/images/captcha/65ae41913a1849ce797648e7ec77772a.png
+1 1 0 4835 0 0
+/templates/frontend/images/photo-default.jpg
+1 230 0 43425 0 0
+/tmp/images/captcha/461cce8432bf68b54426d638e1650b8b.png
+1 1 0 6879 0 0
+/api/posts
+0 1923 0 2214705 71 39
+/api/comments/18/
+0 1 0 880 0 0
+/templates/frontend/css/helveticaneueltstd-ltcn-webfont.woff
+0 642 0 380544 0 0
+/templates/frontend/cara-bermain.html
+0 3 0 14705 0 0
+/api/posts/5/
+0 1 0 620 0 0
+/templates/frontend/images/social.jpg
+1 30 0 10664 0 0
+/templates/frontend/plugins/fancybox/jquery.fancybox.js
+0 342 0 751835 0 0
+/templates/backend/plugins/jqueryui/css/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png
+1 1 620299139896311824 105 0 0
+/api/comments/19/
+0 1 0 891 0 0
+/templates/backend/img/glyphicons-halflings.png
+1 2 72058143793676288 25598 0 0
+/api/posts/5/postByParentId
+0 81 0 284407 0 2
+/templates/frontend/
+0 1 0 5578 1 1
+/templates/backend/plugins/jqueryui/css/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png
+1 1 620295394684829712 90 0 0
+/templates/frontend/images/ui-icons_ffffff_256x240.png
+1 8 0 8738 0 0
+/admin/posts/index
+0 4 620290790479888400 62280 0 0
+/templates/frontend/pemenang.html
+0 1 0 4250 0 0
+/templates/frontend/images/gplus.jpg
+1 235 0 119579 0 0
+/templates/backend/img/bs-docs-masthead-pattern.png
+1 21 0 25800 0 0
+/api/posts/74
+0 11 0 10703 0 0
+/api/posts/76
+0 1 0 660 0 0
+/tmp/images/captcha/420c717783b3a1afc0096c6898317220.png
+1 1 0 5898 0 0
+/templates/frontend/images/loading-bar.gif
+1 118 0 22413 0 0
+/tmp/images/captcha/454134ace6b49d2db8bbdadf65c6aac9.png
+1 1 0 5080 0 0
+/kontak
+0 109 0 952780 1 1
+/account/
+0 66 620267906894135312 655264 1 1
+/profile/
+0 1 0 11497 0 0
+/templates/frontend/js/bootstrap-typeahead.js
+0 2 0 42289 0 0
+/php.php
+0 18 0 456500 1 1
+/tmp/images/captcha/36b78e38ff532b561c7669e5407cb755.png
+1 1 0 5930 0 0
+/templates/frontend/css/helveticaneueltstd-bdcn-webfont.svg
+0 2 0 104904 0 0
+/tmp/images/captcha/115b5aa54e966c9a4272931688f71f0f.png
+1 1 0 4383 0 0
+/templates/frontend/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+1 15 0 550 0 0
+/index/carabermain
+0 16 0 180340 0 0
+/users/index/profile
+0 7 0 43095 0 0
+/templates/frontend/images/bgsignup.png
+1 106 0 13668 0 0
+/templates/frontend/css/jquery.ui.datepicker.css
+0 482 0 70272 0 0
+/posts/view/id/1/\
+0 1 0 13405 0 0
+/tmp/images/captcha/1c90dfd1ed1531855a1065cf6c3fd991.png
+1 1 0 5457 0 0
+/templates/frontend/video/flowplayer-3.2.15.swf
+0 364 0 7477542 0 0
+/templates/frontend/video/player.controls-3.2.12.swf
+0 32 0 497445 0 0
+/index/play/id/74
+0 10 0 8531 0 0
+/templates/frontend/js/bootstrap-tooltip.js
+0 2 0 42501 0 0
+/comments/
+0 4 0 4319 0 0
+/templates/backend/css/supr-theme/jquery.ui.resizable.css
+0 5 620274297805471760 3483 0 0
+/posts/index/id/images/artikel.jpg
+1 9 0 85076 0 0
+/pemenang/
+0 58 0 435540 1 3
+/posts/view/id/1/
+0 278 0 4081855 8 2
+/templates/frontend/css/style-menu.css
+0 862 0 90539 0 0
+/api/posts/posttype
+0 10 620289381730615312 790 0 0
+/posts/index/test
+0 1 0 6794 0 0
+/comments/loadnew/id/4
+0 4 0 3591 0 0
+/templates/frontend/images/logo.png
+1 515 0 563550 0 0
+/templates/backend/plugins/uniform/checkbox.png
+1 5 72058143793676288 5997 0 0
+/templates/frontend/video/player.rtmp-3.2.10.swf
+0 31 0 68112 0 0
+/api/posts/
+0 408 0 561152 0 4
+/templates/frontend/css/style.css
+0 1001 0 3290907 0 0
+/templates/frontend/js/jquery.js
+0 2 0 129644 0 0
+/templates/frontend/images/input_bg.png
+1 37 620283506215354384 16896 0 0
+/comments/loadnew/
+0 25 0 27701 0 0
+/templates/frontend/js/jquery.ui.datepicker.js
+0 483 0 1407634 0 0
+/api/posts/id/1
+0 3 0 120 0 0
+/api/posts/id/7
+0 1 0 874 0 0
+/api/admins
+0 1 0 7 0 0
+/profile/index/id/images/artikel.jpg
+1 51 0 566261 0 0
+/tmp/images/captcha/231d8a22067ef89bdbd6aed81fdc9059.png
+1 1 0 6185 0 0
+/index/resize/image//size/small
+0 37 0 0 0 0
+/posts/view/id/images/populer.jpg
+1 3 0 31980 0 0
+/t.php
+0 26 0 613636 1 1
+/posts/view/id/1/adadad/
+0 2 0 50161 0 0
+/index/resize/image/faiz.jpg/size/335
+0 2 0 2100 0 0
+/templates/frontend/css/images/ui-bg_glass_100_fdf5ce_1x400.png
+1 1 0 125 0 0
+/tmp/images/captcha/a220b687fd977262520447b5478a8091.png
+1 1 0 6673 0 0
+/templates/frontend/images/ui-bg_glass_100_fdf5ce_1x400.png
+1 6 0 250 0 0
+/templates/backend/plugins/jqueryui/css/ui-lightness/images/ui-icons_ffffff_256x240.png
+1 1 620298452701544464 4369 0 0
+/tmp/images/faiz.jpg
+1 8 0 106159 0 0
+/api/posts/poststatus
+0 6 620290549961719824 474 0 0
+/posts/view/id/76
+0 1 0 11006 0 1
+/templates/backend/js/bootstrap-popover.js
+0 35 0 17958 0 0
+/templates/backend/plugins/jqueryui/css/ui-lightness/images/ui-bg_highlight-soft_75_ffe45c_1x100.png
+1 1 620299827091079184 129 0 0
+/templates/frontend/css/reset.css
+0 860 0 97290 0 0
+/templates/frontend/images/vid.jpg
+1 1 0 10403 0 0
+/comments/loadmore/
+0 294 0 951208 14 21
+/templates/frontend/images/ui-bg_highlight-soft_100_eeeeee_1x100.png
+1 14 0 180 0 0
+/templates/frontend/js/bootstrap-collapse.js
+0 2 0 39305 0 0
+/templates/frontend/css/images/ui-bg_flat_75_ffffff_40x100.png
+1 434 0 2848 0 0
+/api/users
+0 83 0 46319 4 2
+/templates/frontend/css/sharre.css
+0 324 0 387122 0 0
+/api/posts/4/postByParentId
+0 18 0 105169 0 0
+/templates/backend/css/style.css
+0 2 620286942189191184 900 0 0
+/profile
+0 4 0 46746 0 0
+/templates/frontend/js/jquery.sharre.js
+0 19 0 30123 0 0
+/tmp/images/captcha/41b9b524e0aaf8cdf36b4aae3b2b66d0.png
+1 1 0 5267 0 0
+/templates/backend/js/bootstrap-collapse.js
+0 35 0 27000 0 0
+/css/960.css
+0 1 0 938 0 0
+/index/resize/image/faiz.jpg/size/medium
+0 218 0 3924869 0 0
+/templates/frontend/images/submit-left.png
+1 41 0 8776 0 0
+/tmp/images/captcha/ba27d8e6bc78be0bf8cc46fcdfcb37d8.png
+1 1 0 4539 0 0
+/templates/backend/img/favicon.ico
+0 3 620284983684104208 3640 0 0
+/templates/frontend/images/speaker.jpg
+1 2 0 2386 0 0
+/templates/frontend/plugins/fancybox/fancybox_sprite.png
+1 32 0 5448 0 0
+/templates/backend/css/bootstrap.css
+0 38 0 826896 0 0
+/admin/module
+0 8 620292714625237008 94994 0 0
+/tmp/stream_data/smill.xml
+0 37 0 5827 0 0
+/profile/index/id/images/vid.jpg
+1 20 0 235102 0 0
+/users/index/loginadmin
+0 53 0 261510 0 1
+/templates/backend/css/docs.css
+0 21 0 84060 0 0
+/tmp/images/captcha/05be17bbcbb53b3b530657c7fc729a06.png
+1 1 0 5675 0 0
+/templates/frontend/css/bootstrap-responsive.css
+0 2 0 55804 0 0
+/templates/frontend/upload-video.html
+0 1 0 6549 0 0
+/templates/frontend/plugins/fancybox/fancybox_overlay.png
+1 32 0 3692 0 0
+/templates/frontend/css/formalize.css
+0 62 620283746733522960 158833 0 0
+/templates/backend/plugins/jqueryui/css/ui-lightness/jquery-ui-1.9.0.custom.css
+0 2 620287629383958544 64602 0 0
+/templates/frontend/plugins/fancybox/jquery.fancybox.css
+0 342 0 99440 0 0
+/templates/frontend/images/ui-bg_glass_65_ffffff_1x400.png
+1 1 0 105 0 0
+/templates/frontend/images/populer.jpg
+1 4 0 9404 0 0
+/templates/frontend/css/images/ui-bg_glass_75_dadada_1x400.png
+1 11 0 444 0 0
+/api/posts/mimetype
+0 6 620290309443551248 474 0 0
+/templates/backend/js/bootstrap.js
+0 6 620269624881053712 225056 0 0
+/templates/frontend/css/helveticaneueltstd-ltcn-webfont.ttf
+0 2 0 86088 0 0
+/tmp/media/dancer.mp4
+0 36 0 199769544 0 0
+/templates/backend/css/supr-theme/jquery.ui.stepper.css
+0 5 620277046584541200 2586 0 0
+/templates/frontend/images/logo.jpg
+1 349 0 618698 0 0
+/templates/backend/plugins/jqueryui/css/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png
+1 1 620297078312009744 3762 0 0
+/index/index/post_id/4
+0 18 0 216980 0 0
+/index/index/post_id/5
+0 19 0 264805 1 1
+/templates/backend/css/icons.css
+0 6 620277733779308560 314497 0 0
+/tmp/images/captcha/562f1ea4ef35bed8250ecfbcfdecd3e7.png
+1 1 0 4610 0 0
+/api/comments/1/
+0 3 0 2682 0 0
+/templates/backend/plugins/jqueryui/css/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png
+1 1 620297765506777104 104 0 0
+/tmp/images/captcha/62b31a1d9af846e5ebaddaae13a32f97.png
+1 1 0 5158 0 0
+/templates/backend/css/fonts/icoMoon.woff
+0 5 620282097466081296 191028 0 0
+/pemenang
+0 15 0 85498 1 0
+/posts/
+0 111 0 1124484 0 0
+/templates/backend/js/bootstrap-scrollspy.js
+0 36 0 29601 0 0
+/api/comments/2/
+0 1 0 870 0 0
+/templates/frontend/upload-photo.html
+0 1 0 6250 0 0
+/templates/frontend/ico/favicon.ico
+0 2 0 35955 0 0
+/api/comments/3/
+0 2 0 1801 0 0
+/tmp/images/captcha/3ec42a5689b38fb54836ef94fc910dc7.png
+1 1 0 4668 0 0
+/templates/frontend/js/bootstrap-carousel.js
+0 2 0 40075 0 0
+/api/comments/4/
+0 5 0 4383 0 0
+/templates/backend/plugins/jqueryui/js/jquery-ui-1.9.0.custom.js
+0 3 620289965846167568 1233879 0 0
+/tmp/media/textimg.jpg
+1 4 0 76572 0 0
+# End Of Table - urls
+# -sites- (monthly)
+206-53-152-172.rdns.blackberry.net
+0 55 21 26345338 1 1349454645
+/
+206-53-152-167.rdns.blackberry.net
+0 73 31 26413987 1 1349454799
+/
+182.8.194.16
+0 2 0 802 1 1349711698
+/
+206-53-152-171.rdns.blackberry.net
+0 53 19 236699 2 1349454621
+/
+bj-office
+0 13282 12682 14571517 77 1350421638
+/api/comments/
+206-53-152-166.rdns.blackberry.net
+0 68 35 540056 2 1349454796
+/
+s10-14.opera-mini.net
+0 2 0 802 1 1349884301
+/posts/view/id/1/
+254.subnet110-137-248.speedy.telkom.net.id
+0 17419 2855 718336586 26 1350414758
+/comments/loadmore/
+40.static.118-96-46.astinet.telkom.net.id
+0 82 76 99215790 3 1349833092
+/comments/loadmore/
+206-53-152-173.rdns.blackberry.net
+0 12 5 55071 0 0
+-
+27.static.118-96-40.astinet.telkom.net.id
+0 13374 3850 1149475326 54 1350407726
+/comments/loadmore/
+123.231.231.193
+0 1 0 401 1 1349956846
+/
+114.199.84.194
+0 3 0 23 0 0
+-
+112.215.66.143
+0 56 27 503399 1 1349383168
+/
+206-53-152-168.rdns.blackberry.net
+0 20 10 304156 1 1349381654
+/pemenang/
+180.245.15.243
+0 77 43 138566553 2 1349479656
+/
+s09-13.opera-mini.net
+0 31 28 244974 1 1349812949
+/posts/view/id/1/
+202.129.188.69
+0 381 195 82033235 2 1350422102
+/
+s10-16.opera-mini.net
+0 57 29 266015 1 1349861595
+/posts/view/id/1/
+# End Of Table - sites (monthly)
+# -sites- (daily)
+bj-office
+0 1247 1139 1788902 5 1350421638
+/api/comments/
+254.subnet110-137-248.speedy.telkom.net.id
+0 1698 540 130258761 4 1350414758
+/comments/loadmore/
+27.static.118-96-40.astinet.telkom.net.id
+0 501 159 101141505 3 1350407726
+/comments/loadmore/
+202.129.188.69
+0 381 195 82033235 2 1350422102
+/
+# End Of Table - sites (daily)
+# -referrers- 
+http://speedy.dev.pusatmedia.com/templates/frontend/css/style-menu.css
+0 615
+- (Direct Request)
+0 16064
+http://livenu.dev.pusatmedia.com/admin/module
+0 27
+http://livenu.dev.pusatmedia.com/templates/frontend/css/formalize.css
+0 35
+http://speedy.dev.pusatmedia.com/posts/index/id/2
+0 93
+http://speedy.dev.pusatmedia.com/users/index/loginmt
+0 30
+http://livenu.dev.pusatmedia.com/users/index/login
+0 53
+http://speedy.dev.pusatmedia.com/kontak
+0 1086
+http://speedy.dev.pusatmedia.com/php.php
+0 10
+http://livenu.dev.pusatmedia.com/users/account/
+0 11
+http://livenu.dev.pusatmedia.com/api/posts/
+0 35
+http://livenu.dev.pusatmedia.com/php.php
+0 2
+http://livenu.dev.pusatmedia.com/admin/users/index
+0 5
+http://speedy.dev.pusatmedia.com/index/resize/image/faiz.jpg/size/small
+0 15
+http://releases.flowplayer.org/swf/flowplayer-3.2.15.swf
+0 1
+http://speedy.dev.pusatmedia.com/templates/frontend/cara-bermain.html
+0 18
+http://www.livenu.dev.pusatmedia.com/templates/frontend/video/flowplayer-3.2.15.swf
+0 3
+http://speedy.dev.pusatmedia.com/templates/frontend/profile.html
+0 4
+http://livenu.dev.pusatmedia.com/account/
+0 781
+http://releases.flowplayer.org/5.0.0/flowplayer.swf
+0 1
+http://speedy.dev.pusatmedia.com/profile
+0 30
+http://speedy.dev.pusatmedia.com/profile/index/id/10
+0 515
+http://speedy.dev.pusatmedia.com/profile/index/id/11
+0 42
+http://speedy.dev.pusatmedia.com/profile/index/id/14
+0 42
+http://speedy.dev.pusatmedia.com/users/index/login
+0 261
+http://www.livenu.dev.pusatmedia.com/posts/view/id/1/
+0 32
+http://livenu.dev.pusatmedia.com/templates/backend/plugins/uniform/uniform.default.css
+0 5
+http://livenu.dev.pusatmedia.com/posts/view/id/1/adadad/
+0 2
+http://speedy.dev.pusatmedia.com/templates/frontend/
+0 17
+http://livenu.dev.pusatmedia.com/templates/backend/css/main.css
+0 22
+http://livenu.dev.pusatmedia.com/posts/view/id/1/
+0 4175
+http://livenu.dev.pusatmedia.com/posts/index/test
+0 1
+http://speedy.dev.pusatmedia.com/templates/frontend/upload-artikel.html
+0 8
+http://livenu.dev.pusatmedia.com/admin
+0 3
+http://speedy.dev.pusatmedia.com/profile/
+0 7
+http://livenu.dev.pusatmedia.com/admin/posts/index
+0 22
+http://livenu.dev.pusatmedia.com/templates/frontend/css/style.css
+0 1181
+http://www.livenu.dev.pusatmedia.com/
+0 25
+http://speedy.dev.pusatmedia.com/users/index/profile
+0 65
+http://livenu.dev.pusatmedia.com/admin/index/
+0 46
+http://speedy.dev.pusatmedia.com/profile/index/id/0
+0 3
+http://speedy.dev.pusatmedia.com/profile/index/id/6
+0 78
+http://speedy.dev.pusatmedia.com/index/index/post_id/4
+0 138
+http://speedy.dev.pusatmedia.com/index/index/post_id/5
+0 281
+http://speedy.dev.pusatmedia.com/posts/
+0 1414
+http://livenu.dev.pusatmedia.com/posts/view/id/1/\
+0 1
+http://livenu.dev.pusatmedia.com/templates/backend/css/icons.css
+0 5
+http://auth.mindtalk.com/ui/login
+0 6
+http://livenu.dev.pusatmedia.com/users/index/login/
+0 246
+http://speedy.dev.pusatmedia.com/t.php
+0 16
+http://livenu.dev.pusatmedia.com/templates/backend/css/supr-theme/jquery.ui.supr.css
+0 40
+http://speedy.dev.pusatmedia.com/users/index/register
+0 178
+http://livenu.dev.pusatmedia.com/templates/frontend/video/flowplayer-3.2.15.swf
+0 172
+http://www.livenu.dev.pusatmedia.com/templates/frontend/css/style.css
+0 11
+http://livenu.dev.pusatmedia.com/admin/posts/edit/id/1
+0 8
+http://speedy.dev.pusatmedia.com/templates/frontend/plugins/fancybox/jquery.fancybox.css
+0 92
+http://speedy.dev.pusatmedia.com/users/index/loginadmin
+0 523
+http://project.redwhite.co.id/projects/livenu
+0 8
+http://speedy.dev.pusatmedia.com/
+0 7736
+http://speedy.dev.pusatmedia.com/templates/frontend/upload-photo.html
+0 1
+http://livenu.dev.pusatmedia.com/
+0 3608
+http://speedy.dev.pusatmedia.com/posts/view/id/76
+0 10
+http://speedy.dev.pusatmedia.com/index/carabermain
+0 266
+http://speedy.dev.pusatmedia.com/templates/frontend/pemenang.html
+0 2
+http://speedy.dev.pusatmedia.com/templates/frontend/css/jquery.ui.theme.css
+0 598
+http://speedy.dev.pusatmedia.com/pemenang
+0 164
+http://speedy.dev.pusatmedia.com/templates/backend/css/docs.css
+0 19
+http://speedy.dev.pusatmedia.com/templates/frontend/video/flowplayer-3.2.15.swf
+0 115
+http://auth.mindtalk.com/ui/authorization
+0 6
+http://livenu.dev.pusatmedia.com/users/index/loginadmin
+0 133
+http://livenu.dev.pusatmedia.com/templates/backend/css/docs.css
+0 2
+http://livenu.dev.pusatmedia.com/templates/backend/plugins/jqueryui/css/ui-lightness/jquery-ui-1.9.0.custom.css
+0 6
+http://speedy.dev.pusatmedia.com/admin
+0 1471
+http://speedy.dev.pusatmedia.com/templates/frontend/css/style.css
+0 1601
+http://livenu.dev.pusatmedia.com/posts/
+0 15
+http://speedy.dev.pusatmedia.com/posts
+0 57
+http://speedy.dev.pusatmedia.com/pemenang/
+0 595
+http://livenu.dev.pusatmedia.com/users/index/edit
+0 15
+http://livenu.dev.pusatmedia.com/templates/backend/css/bootstrap.css
+0 4
+http://livenu.dev.pusatmedia.com/users/profile/index/id/1
+0 14
+# End Of Table - referrers
+# -agents- 
+Mozilla/5.0 (Windows NT 5.1; rv:15.0) Gecko/20100101 Firefox/15.0.1
+0 45
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/22.0.1229.94 Safari/537.4
+0 79
+AppleCoreMedia/1.0.0.9B206 (iPad; U; CPU OS 5_1_1 like Mac OS X; en_us)
+0 256
+Mozilla/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48
+0 93
+Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1
+0 168
+Mozilla/5.0 (Windows NT 6.1; rv:16.0) Gecko/20100101 Firefox/16.0
+0 7464
+Mozilla/5.0 (BlackBerry; U; BlackBerry 9900; en-US) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.576 Mobile Safari/5
+0 201
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.13 (KHTML, like Gecko) Chrome/24.0.1290.1 Safari/537.13
+0 110
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.13 (KHTML, like Gecko) Chrome/24.0.1284.2 Safari/537.13
+0 1853
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/534.57.2 (KHTML, like Gecko) Version/5.1.7 Safari/534.57.2
+0 82
+Mozilla/5.0 (Linux; U; Android 2.3.4; en-ph; GT-S5830 Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mo
+0 56
+Mozilla/5.0 (Windows NT 6.1; rv:17.0) Gecko/17.0 Firefox/17.0
+0 373
+Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobi
+0 36
+Opera/9.80 (Windows NT 6.1; U; en) Presto/2.10.289 Version/12.01
+0 167
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/22.0.1229.94 Safari/537.4
+0 103
+Mozilla/5.0 (iPad; U; CPU OS 4_3_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8J2 Sa
+0 31
+Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; en-us) AppleWebKit/534.57.2 (KHTML, like Gecko) Version/5.1.6 Safari/534.57
+0 33
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/22.0.1229.79 Safari/537.4
+0 564
+BlackBerry8520/5.0.0.1036 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/186
+0 195
+Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko/20100101 Firefox/11.0
+0 37
+Mozilla/5.0 (BlackBerry; U; BlackBerry 9700; en) AppleWebKit/534.8+ (KHTML, like Gecko) Version/6.0.0.723 Mobile Safari/534.8
+0 448
+Mozilla/5.0 (iPhone; CPU iPhone OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A403 Safari
+0 31
+Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20100101 Firefox/15.0.1
+0 18955
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/22.0.1229.79 Safari/537.4
+0 345
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.187 Safari/535.1
+0 41
+# End Of Table - agents
+# -search strings- 
+# End Of Table - search strings
+# -usernames- 
+1
+0 38550 19906 2249628703 516 1350422102
+# End Of Table - usernames

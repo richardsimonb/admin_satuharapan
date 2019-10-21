@@ -1,0 +1,113 @@
+<script type="text/javascript" src="{$tplpath}js/demo/demo.ui.js"></script>
+<div id="da-ex-dialog-form-div" class="no-padding">
+    <form id="da-ex-dialog-form-val" class="da-form" method="post" action="">
+        <div id="da-validate-error" class="da-message error" style="display:none;"></div>
+        <div class="da-form-inline">
+            {$this->render('partial/rowaddmodule.html')}
+        </div>
+    </form>
+</div>
+<div class="grid_4">
+    <div class="da-panel">
+        {if $alert}
+        <div class="da-message {$alert.status}">
+            {$alert.message}
+        </div>
+        {/if}
+    </div>
+</div>
+<div class="grid_4">
+	<div class="da-panel collapsible">
+    	<div class="da-panel-header">
+        	<span class="da-panel-title">
+                <img src="{$tplpath}images/icons/black/16/list.png" alt="" />
+                 Listing module for page {$page.title}
+            </span>
+        </div>
+        <div class="da-panel-toolbar top">
+            <ul>
+                <li><a href="javascript:void(0);" id="remove-all"><img alt="" src="{$tplpath}images/icons/color/cross.png">Delete</a></li>
+                <li><a href="javascript:void(0);"><button id="da-ex-dialog-form" class="da-button green">Add module</button></a></li>
+            </ul>
+        </div>        
+        <div class="da-panel-content">
+            <form action="" id="form-table" method="post">
+                <table class="da-table">
+                    <thead>
+                        <tr>
+                        	<th><input type="checkbox" class="checkall"/></th>
+                            <th>Module</th>
+                            <th>Controller</th>
+                            <th>Action</th>
+                            <th>Params</th>
+                            
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {foreach from=$modules item=row}
+                       <tr class="{$row.uid}">
+                        	<td><input type="checkbox" name="uid[]" value="{$row.uid}"  class="child-checked"/></td>
+                            <td>{$row.module}</td>
+                            <td>{$row.controller}</td>
+                            <td>{$row.action}</td>
+                            <td>{$row.params}</td>
+                            <td class="da-icon-column">
+                            	<a href="{$baseUrl}/pages/admin/moduleedit/mm_module_id/{$row.uid}"><img src="{$tplpath}images/icons/color/pencil.png" /></a>
+                            </td>
+                        </tr>
+                     {/foreach}   
+                    </tbody>
+                </table>
+            </form>
+        
+        </div><!--end panel content table-->
+        
+    </div>
+</div>
+{literal}
+<script type="text/javascript">
+$(document).ready(function() {     
+    var  baseUrl = "{/literal}{$baseUrl}/{literal}";
+    $('.checkall').click(function () {
+	   $(this).parents('table:eq(0)').find(':checkbox').attr('checked', this.checked);
+	});
+    
+    $("#remove-all").click(function() { //begin
+        jConfirm('Are you sure you want to delete this item?', 'Confirmation', function(r) {
+            if(r){
+                 var checkeditems = $('input:checkbox[name="uid[]"]:checked')
+                       .map(function() { return $(this).val() })
+                       .get()
+                       .join(",");                      
+                    var substr = checkeditems.split(',');
+                    console.log(substr);
+                    //alert(substr.length);  
+                    var datastring = $('#form-table').serialize();
+                    var i;
+                    $("#loading_overlay").show();  
+            		    
+                    $.ajax({                        
+                        url: baseUrl+"pages/admin/moduledel",
+                        type: 'POST',
+                        data: datastring,
+                        async: true,
+                        success: function (data) {
+                                    var i;
+                                    for (i = 0; i < substr.length; ++i) {
+                                        $("." +substr[i]).fadeOut(500, function() {
+                        					$("."+substr[i]).remove();
+                        				});
+                                    }
+                                    $("#loading_overlay").hide();
+                                    //window.parent.document.location.reload();
+                            },           
+                        });
+            } //end jconfirm r== true
+        });
+    return false; 
+    }); //end 
+       
+});
+</script>
+{/literal}

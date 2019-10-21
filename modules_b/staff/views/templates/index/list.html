@@ -1,0 +1,122 @@
+
+    <div class="page-header"><h4>Users</h4></div>
+    
+        <form class="form-inline" method="get" action="" id="form-search">
+		        <input type="text" value="{if isset($smarty.get.name)}{$smarty.get.name}{/if}" placeholder="Name" name="name">
+                <div class="input-prepend">
+                    <span class="add-on">Tanggal</span>
+                    <input type="text" class="datepicker span2" name="awal" value="{if isset($params.awal)}{$params.awal}{/if}" /> <span class="add-on">-</span> <input type="text" class="datepicker span2" name="akhir" value="{if isset($params.akhir)}{$params.akhir}{/if}"/>
+                </div>
+                
+		        <button type="submit" class="btn btn-success">Search</button>
+		        <!--<a href="#advSearch" role="button" class="btn btn-primary" data-toggle="modal">Advance Search</a>-->        
+		    <a href="{$baseUrl}/staff/index/new" class="btn btn-primary pull-right" >New</a>
+         </form>
+     
+    
+    
+    <form action="" method="post" id="form-users">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th><input type="checkbox" class="checkall"/></th>
+          <th>Name</th> 
+          <th>Username</th>
+          <th>Email</th>  
+          <th>Group</th>      
+          <th>Created</th>
+          <th>Posting</th>
+          <th>Publish</th>
+          <th>Unpublish</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+      {if $numrows lt 1}
+      <tr><td colspan="7"><div class="alert">Data Not Found</div></td></tr>
+      {/if}
+       {foreach from=$rows item=row}
+        <tr class="{$row.uid}">
+          <td><input type="checkbox" name="uid[]" value="{$row.uid}"  class="child-checked"/></td>  
+          <td>{$row.name}</td>  
+          <td>{$row.username}</td>  
+          <td>{$row.email}</td> 
+          <td>{$row.group_title}</td>       
+          <td>{$row.crdate|date_format:"%d-%m-%Y"}</td>
+          <td>{$row.jumlah_berita}</td>
+          <td>{$row.publish}</td>
+          <td>{$row.unpublish}</td>
+          <td>{if $row.disable eq 0}<span class="label label-success">active</span>{else}<span class="label label-important">disable</span>{/if}</td>
+          <td><a href="{$baseUrl}/staff/index/edit/uid/{$row.uid}" class="btn btn-warning">edit</a></td>
+        </tr>
+       {/foreach}
+      </tbody>
+    </table>
+    </form>
+       
+    <div class="delete-all">
+    	<a href="javascript:void(0);" id="remove-all" class="btn btn-danger"><i class="icon-remove icon-white"></i>&nbsp;Delete</a>
+    </div>
+    
+    {if $totalpage gt 1}    
+    
+    <div class="pagination">
+    	
+    	<div class="page">
+	        <ul>
+	            {paginate_first id=$id_paging target="_self"} 
+	            {paginate_prev id=$id_paging target="_self"}
+	            {paginate_middle format="page" prefix=" " suffix=" " page_limit="5" id=$id_paging target="_self"}
+	            {paginate_next id=$id_paging target="_self"}
+	            {paginate_last id=$id_paging target="_self"}
+	        </ul> 
+        </div>
+    </div> 
+    {/if}
+ 
+{literal}
+<script type="text/javascript">
+$(document).ready(function() {     
+    var  baseUrl = "{/literal}{$baseUrl}{literal}/";
+    $('.checkall').click(function () {
+	   $(this).parents('table:eq(0)').find(':checkbox').attr('checked', this.checked);
+	});
+    
+    
+    $("#remove-all").click(function() { //begin
+      
+                 var checkeditems = $('input:checkbox[name="uid[]"]:checked')
+                       .map(function() { return $(this).val() })
+                       .get()
+                       .join(",");                      
+                    var substr = checkeditems.split(',');
+                    console.log(substr);
+                    //alert(substr.length);  
+                    var datastring = $('#form-users').serialize();
+                    var i;
+                    $("#loading_overlay").show();  
+            		    
+                    $.ajax({                        
+                        url: baseUrl+"staff/index/list/act/delete",
+                        type: 'POST',
+                        data: datastring,
+                        async: true,
+                        success: function (data) {
+                                    var i;
+                                    for (i = 0; i < substr.length; ++i) {
+                                        $("." +substr[i]).fadeOut(500, function() {
+                        					$("."+substr[i]).remove();
+                        				});
+                                    }
+                                    $("#loading_overlay").hide();
+                                    //window.parent.document.location.reload();
+                            },           
+                        });
+           
+    return false; 
+    }); //end 
+       
+});
+</script>
+{/literal}

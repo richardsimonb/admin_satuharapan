@@ -1,0 +1,112 @@
+<div class="row">
+    <div class="span4">
+        <form class="form-search" method="get">
+            <select name="post_type" class="input-medium search-query" >
+                <option value="all">ALL</option>
+                {foreach from=$postType item=row}
+                    <option value="{$row.post_type}" {if $smarty.get.post_type eq $row.post_type}selected{/if}>{$row.post_type|upper}</option>
+                {/foreach}
+            </select>
+            <button type="submit" class="btn btn-primary">Filter Category</button>
+        </form>
+    </div>
+    <div class="span8">
+        <div class="pull-right">
+            <a href="#formsearch" class="btn btn-success" data-toggle="modal"><i class="icon-search icon-white"></i> Advanced Search</a>
+            <a href="#newpost" class="btn btn-success" data-toggle="modal"><i class="icon-plus icon-white"></i> New Post</a>
+            <a href="{$baseUrl}/admin/posts/index/post_status/trash" class="btn btn-danger"><i class="icon-trash icon-white"></i> Trash</a>
+        </div>
+        
+        <div id="formsearch" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="formsearchLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3 id="formsearchLabel">Advanced search</h3>
+            </div>
+            <div class="modal-body">
+                {$this->render("table/post.html")}
+            </div>
+            <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            <button class="btn btn-primary">Search</button>
+            </div>
+        </div>
+        <form action="" method="post">
+            <div id="newpost" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="newpostLabel" aria-hidden="true">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h3 id="newpostLabel">New Post {if $parentPost}({$parentPost.post_title}){/if}</h3>
+                </div>
+                <div class="modal-body">
+                    {$this->render("table/post.html")}
+                </div>
+                <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                <button class="btn btn-primary">SAVE</button>
+                <input type="hidden" name="act" value="newpost"/>
+                {if $parentPost}<input type="hidden" name="f[post_parent]" value="{$parentPost.ID}" />{/if}   
+                </div>
+            </div>
+        </form>
+        
+    </div>
+</div>
+<div class="row">
+    <div class="span12">
+       {if $parentPost}<h4>Parent post : {$parentPost.post_title} </h4>{/if}
+       {if $params.act} 
+       <div class="alert alert-{$status}">
+            <button type="button" class="close" data-dismiss="alert">x</button>
+            <strong>{$status}!</strong> {$message}
+        </div>
+        {/if}
+        <table class="table table-hover">
+            <tr>
+                <th>Author</th>
+                <th>Post Date</th>
+                <th>Post Date End</th>
+                <th>Title</th>
+                <th>Type</th>
+                <th>Mime Type</th>
+                <th>Vote</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+            {foreach from=$posts item=row}
+            <tr>
+                <td>{$row.users.0.name}</td>
+                <td>{$row.post_date}</td>
+                <td>{$row.post_date_end}</td>
+                <td><a href="{$baseUrl}/admin/posts/edit/id/{$row.ID}">{$row.post_title}</a></td>
+                <td>{$row.post_type|upper}</td>
+                <td>{$row.post_mime_type}</td>
+                <td>{$row.post_vote}</td>
+                <td>{$row.post_status|upper}</td>
+                <td>
+                    <div class="btn-group">
+                         <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{$baseUrl}/admin/posts/edit/id/{$row.ID}"><i class="icon-edit"></i> Edit</a></li>
+                            {if $params.post_status eq 'trash'}
+                                <li><a href="{$baseUrl}/admin/posts/index/post_status/trash?act=publish&id={$row.ID}"><i class="icon-ok"></i> Publish</a></li>
+                                <li><a href="{$baseUrl}/admin/posts/index/post_status/trash?act=delete&id={$row.ID}"><i class="icon-trash"></i> Delete</a></li>
+                            {else}
+                                <li><a href="{$viewUrl}/?act=trash&id={$row.ID}"><i class="icon-trash"></i> Trash</a></li>
+                            {/if}
+                            <li><a href="{$baseUrl}/admin/posts/index/post_parent/{$row.ID}"><i class="icon-resize-vertical"></i>Sub Posts</a></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            {/foreach}
+        </table>
+      <div class="pagination">
+        <ul>
+           {paginate_first id=$id_paging target="_self"} 
+           {paginate_prev id=$id_paging target="_self"}
+           {paginate_middle format="page" prefix=" " suffix=" " page_limit="5" id=$id_paging target="_self"}
+           {paginate_next id=$id_paging target="_self"}
+           {paginate_last id=$id_paging target="_self"}
+        </ul> 
+      </div>
+    </div>
+</div>

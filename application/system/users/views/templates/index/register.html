@@ -1,0 +1,13 @@
+<div class="container_12">
+    <div class="grid_12">
+        <div  class="popup signup edt">
+            {if $message}<div class="alert alert-error">{$message}</div>{/if}
+            <form action="" method="post" id="signupForm">
+                {$this->partial('partial/reguser.html')}
+                <p style="position: relative; margin-top:60px;">
+                    <input type="submit" value="Register"  name="update" class="btn btn-success btn-large"/>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>

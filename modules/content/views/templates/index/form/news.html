@@ -1,0 +1,163 @@
+<ul id="myTab" class="nav nav-tabs">
+          <li class="active"><a href="#general" data-toggle="tab">General</a></li>
+          <li><a href="#special" data-toggle="tab">Special</a></li>
+          <li><a href="#media" data-toggle="tab">Media</a></li>
+          <li><a href="#relation" data-toggle="tab">Categories & Relations </a></li>
+          <li><a href="#access" data-toggle="tab">Access </a></li>
+        </ul>
+        
+        <div id="myTabContent" class="tab-content">
+          <div class="tab-pane fade in active" id="general">   
+            {if $smarty.session.Default.user.usergroup ne 1}
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">Hidden</label>
+                <div class="controls">
+                    <input type="checkbox" name="f[hidden]" value="1" {if isset($detail) && $detail.hidden eq 1}checked=""{/if} />
+                </div>
+            </div>
+            {/if}
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">Title</label>
+                <div class="controls">
+                    <input type="text" class="span5" value="{if isset($detail)}{$detail.title}{/if}" name="f[title]" >
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">Text</label>
+                <div class="controls">
+                    <textarea name="f[bodytext]" class="ckeditor" id="editor1">{if isset($detail)}{$detail.bodytext}{/if}</textarea>
+                </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="special">
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">Date/Time:</label>
+                <div class="controls">
+                    <input type="text" class="spa5 datetimepicker" name="f[datetime]" value="{if isset($detail)}{$detail.datetime|date_format:"%d-%m-%Y %H:%M"}{/if}">
+                </div>
+            </div>
+            <!--
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">Archive date:</label>
+                <div class="controls">
+                    <input type="text" class="datepicker" name="f[archivedate]"   value="{if isset($detail)}{$detail.archivedate|date_format:"%d-%m-%Y"}{/if}">
+                </div>
+            </div> -->
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">Author:</label>
+                <div class="controls">
+                    <input type="text" class=""  disabled="" value="{if isset($detail)}{$detail.author}{/if}">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">Email:</label>
+                <div class="controls">
+                    <input type="text" class=""  name="f[author_email]" disabled="" value="{if isset($detail)}{$detail.author_email}{/if}" >
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">Keywords (,):</label>
+                <div class="controls">
+                	<textarea name="f[keywords]">{if isset($detail)}{$detail.keywords}{/if}</textarea>	
+                </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="media">
+           
+            <table class="table table-bordered">
+                {if isset($detail)}
+                    <tr>
+                        <th>Image</th>
+                        <th>Filename</th>
+                        <th>Action</th>
+                    </tr>
+                    {foreach from=$images item=img}
+                        <tr>
+                            <td>
+                                <a href=""><img src="{$baseUrl}/news/index/image/filename/{$img}/width/100"/></a>
+                                <input type="hidden" name="filename[]" value="{$img}" />
+                            </td>
+                            <td>{$img}</td>
+                            <td><a href="" class="btn btn-danger">delete</a></td>
+                        </tr>
+                    {/foreach}
+                {/if}
+            </table>
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">Images: </label>
+                <div class="controls">
+                    <input type="file" class="" name="image" >
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" >Caption:</label>
+                <div class="controls">
+                    <input type="text" class="" value="{if isset($detail)}{$detail.imagecaption}{/if}" name="f[imagecaption]">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" >Image alttext:</label>
+                <div class="controls">
+                    <input type="text" class="" value="{if isset($detail)}{$detail.imagealttext}{/if}" name="[imagealttext]">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" >Image titletext:</label>
+                <div class="controls">
+                    <input type="text" class="" value="{if isset($detail)}{$detail.imagetitletext}{/if}" name="f[imagetitletext]">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" >Links:</label>
+                <div class="controls">
+                    <input type="text" class="" value="{if isset($detail)}{$detail.links}{/if}"  name="f[links]">
+                </div>
+            </div>
+          </div>
+          
+          <div class="tab-pane fade" id="relation">
+            <select name="category[uid_foreign]">
+                {foreach from=$categories item=cat}
+                    <option value="{$cat.uid}"
+                                    {if isset($detail)}
+                                      {if $cat.uid eq $detail.newscatmm_uid_foreign}
+                                      selected=""
+                                      {/if}  
+                                    {/if}>{$cat.title}
+                        {if isset($cat.sub)}
+                            {foreach from=$cat.sub item=catsub}
+                                <option  value="{$catsub.uid}"
+                                    {if isset($detail)}
+                                      {if $catsub.uid eq $detail.newscatmm_uid_foreign}
+                                      selected=""
+                                      {/if}  
+                                    {/if}
+                                >--{$catsub.title}</option>
+                            {/foreach}
+                        {/if}    
+                    </option>
+                {/foreach}
+            </select>
+          </div>
+          
+          <div class="tab-pane fade" id="access">
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">Start:</label>
+                <div class="controls">
+                    <input type="text" class="datepicker" value="{if isset($detail) && $detail.starttime !=0}{$detail.starttime|date_format:"%d-%m-%Y"}{/if}" name="f[starttime]">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">Stop:</label>
+                <div class="controls">
+                    <input type="text" class="datepicker" value="{if isset($detail) && $detail.endtime !=0}{$detail.endtime|date_format:"%d-%m-%Y"}{/if}" name="f[endtime]">
+                </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="modal-footer">
+        	<input type="submit" class="btn btn-primary " value="SAVE" />
+		</div>
+		
+

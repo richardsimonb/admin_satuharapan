@@ -1,0 +1,32 @@
+<div class="container" style="width: 600px; padding-left: 38px; ">
+	<div class="row">
+		<div class="10">
+			<h1 class="title-preview">{$row.title}</h1>
+		</div>
+	</div>
+	<div class="row top-preview">
+		<div class="span4 img-preview">
+	       {if !empty($image.0)}
+	        <img  src="/uploads/pics/{$image.0}"/>
+	       {else}
+	        <img  src="/uploads/pics/no-image.jpg" style="height: 200px;"/>
+	       {/if}
+			
+		</div>
+	    <div class="span2 rel-preview">
+	          <div style="" id="related-by-cat" class="dright">
+				<div class="dttl">Kabar Terkait</div>
+				<ul class="dcon" style="">
+					<li><a title="" href="#"> sample item related news sample item related news</a></li>
+	                <li><a title="" href="#"> sample item related news sample item related news</a></li>
+	                <li><a title="" href="#"> sample item related news sample item related news</a></li>               
+				</li>
+			</div>
+	    </div>
+	</div>
+	<div class="row">
+		<div class="10">
+			{$row.bodytext}
+		</div>
+	</div>
+</div>

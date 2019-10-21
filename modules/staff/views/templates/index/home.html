@@ -1,0 +1,47 @@
+ <div id="fb-root"></div>
+<script>        
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId   : '180517682061615',          
+              status  : true, // check login status
+              cookie  : true, // enable cookies to allow the server to access the session
+              xfbml   : true // parse XFBML
+            });
+    
+            // whenever the user logs in, we refresh the page
+            FB.Event.subscribe('auth.login', function() {
+             //window.location.reload();
+            });
+            FB.Event.subscribe('comment.create',
+        		 function(response) {
+    		         var commentQuery = FB.Data.query("SELECT text, fromid FROM comment WHERE post_fbid='"+response.commentID+"' AND object_id IN (SELECT comments_fbid FROM link_stat WHERE url='"+response.href+"')");
+    		         var userQuery = FB.Data.query("SELECT name FROM user WHERE uid in (select fromid from {0})", commentQuery);
+    		
+    		         FB.Data.waitOn([commentQuery, userQuery], function() {
+    		             var commentRow = commentQuery.value[0];
+    		             var userRow = userQuery.value[0];
+    		             console.log(userRow.name+" (id: "+commentRow.fromid+") posted the comment: "+commentRow.text);
+    		         });
+    		     }
+    
+        	);
+          };
+    
+          (function() {
+            var e = document.createElement('script');
+            e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+            e.async = true;
+            document.getElementById('fb-root').appendChild(e);
+          }());
+    </script>
+<div class="row">
+    <div class="span8">
+    
+        <div class="page-header"><h3>INFORMASI  UMMUL QURO SMART-SYSTEM</h3></div>	
+    <fb:comments xid="comment_pengumuman" numposts="10" canpost="true" candelete="false" ></fb:comments>
+    </div>
+    <div class="span4">
+        <div class="page-header"><h3>Siswa Baru</h3></div>
+         
+    </div>
+</div>

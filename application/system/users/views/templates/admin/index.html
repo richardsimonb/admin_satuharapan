@@ -1,0 +1,116 @@
+<div class="grid4">
+    <div class="da-panel collapsible">
+        {$this->partial('admin/menu.html')}
+        {$this->partial('partial/alert.html')}
+        <div class="da-panel-header">
+        	<span class="da-panel-title">
+                <img alt="" src="{$tplpath}images/icons/color/blog.png">
+                List Frontend Users
+            </span>
+            <span class="da-panel-toggler"></span>
+        </div>
+        <div class="da-panel-toolbar top">
+            <ul>
+                <li><a href="javascript:void(0);" id="remove-all"><img alt="" src="{$tplpath}images/icons/color/cross.png">Delete</a></li>
+                <li><a href="{$baseUrl}/users/admin/fecategory"><img alt="" src="{$tplpath}images/icons/color/vcard.png">Feuser Level</a></li>
+                <li><a href="{$baseUrl}/users/admin/feusernew"><img alt="" src="{$tplpath}images/icons/color/user.png">New Users</a></li>
+            </ul>
+        </div>
+        <div class="da-panel-content">
+            <form action="" method="post" id="form-users">
+            <table class="da-table">
+                <tr>
+                    <th><input type="checkbox" class="checkall"/></th> 
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Birthday</th>
+                    <th>Gender</th>
+                    <th>Registered</th>
+                    <th>Level</th>
+                    <th>Provider</th>
+                    <th>Provider ID</th>
+                    <th>Twitter Screen Name</th>
+                    <th>Action</th>
+                </tr>
+                {foreach from=$users item=row}
+                <tr class="{$row.uid}">
+                    <td><input type="checkbox" name="uid[]" value="{$row.uid}"  class="child-checked"/></td>
+                    <td>{$row.name}</td>
+                    <td>{$row.email}</td>
+                    <td>{$row.birthday}</td>
+                    <td>{$row.gender}</td>
+                    <td>{$row.registered}</td>
+                    <td>{$row.level}</td>
+                    <td>{$row.provider}</td>
+                    <td>{$row.provider_id}</td>.
+                    <td>{$row.tw_screen_name}</td>
+                    <td class="da-icon-column">
+                    	<a href="{$baseUrl}/users/admin/feuseredit/user_uid/{$row.uid}"><img src="{$tplpath}images/icons/color/pencil.png"></a>
+                    </td>
+                </tr>
+                {/foreach}
+            </table>
+            </form>            
+        </div><!--end panel content tabel-->
+        <div class="da-panel-content">
+            <div class="pagination">
+                <ul>
+                    {paginate_first id=$id_paging target="_self"} 
+                    {paginate_prev id=$id_paging target="_self"}
+                    {paginate_middle format="page" prefix="" suffix="" page_limit="5" id=$id_paging target="_self"}
+                    {paginate_next id=$id_paging target="_self"}
+                    {paginate_last id=$id_paging target="_self"}
+                </ul> 
+            </div>    
+        </div>
+                                
+            
+    </div>
+</div>
+
+{literal}
+<script type="text/javascript">
+$(document).ready(function() {     
+    var  baseUrl = "{/literal}{$baseUrl}{literal}/";
+    $('.checkall').click(function () {
+	   $(this).parents('table:eq(0)').find(':checkbox').attr('checked', this.checked);
+	});
+    
+    $("#remove-all").click(function() { //begin
+        jConfirm('Are you sure you want to delete this item?', 'Confirmation', function(r) {
+            if(r){
+                 var checkeditems = $('input:checkbox[name="uid[]"]:checked')
+                       .map(function() { return $(this).val() })
+                       .get()
+                       .join(",");                      
+                    var substr = checkeditems.split(',');
+                    console.log(substr);
+                    //alert(substr.length);  
+                    var datastring = $('#form-users').serialize();
+                    var i;
+                    $("#loading_overlay").show();  
+            		    
+                    $.ajax({                        
+                        url: baseUrl+"users/admin/feusersdel",
+                        type: 'POST',
+                        data: datastring,
+                        async: true,
+                        success: function (data) {
+                                    var i;
+                                    for (i = 0; i < substr.length; ++i) {
+                                        $("." +substr[i]).fadeOut(500, function() {
+                        					$("."+substr[i]).remove();
+                        				});
+                                    }
+                                    $("#loading_overlay").hide();
+                                    //window.parent.document.location.reload();
+                            },           
+                        });
+            } //end jconfirm r== true
+        });
+    return false; 
+    }); //end 
+       
+});
+</script>
+{/literal}

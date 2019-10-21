@@ -1,0 +1,50 @@
+{$this->headScript()}
+<div id="da-sidebar">
+    <!-- Main Navigation -->
+    <div id="da-main-nav" class="da-button-container">
+        <ul>
+            <li class="active">
+            	<a href="{$baseUrl}/pages/admin/menu">
+                	<!-- Icon Container -->
+                	<span class="da-nav-icon">
+                    	<img src="{$tplpath}/images/icons/black/32/home.png" alt="Dashboard" />
+                    </span>
+                	Pages
+                </a>
+                
+            </li>
+            <li>
+            	<a href="{$baseUrl}/admin/module">
+                	<!-- Nav Notification -->
+                    <span class="da-nav-count">{$module|count}</span>
+                	<!-- Icon Container -->
+                	<span class="da-nav-icon">
+                    	<img src="{$tplpath}/images/icons/black/32/graph.png" alt="Charts" />
+                    </span>
+                	Modules
+                </a>
+                
+            </li>
+            <li>
+            	<a href="calendar.html">
+                	<!-- Icon Container -->
+                	<span class="da-nav-icon">
+                    	<img src="{$tplpath}/images/icons/black/32/day_calendar.png" alt="Calendar" />
+                    </span>
+                	Plugins
+                </a>
+            </li>
+            <li>
+            	<a href="{$baseUrl}/users/admin">
+                	<!-- Icon Container -->
+                	<span class="da-nav-icon">
+                    	<img src="{$tplpath}/images/icons/black/32/admin_user.png" alt="users" />
+                    </span>
+                	Users
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+</div>

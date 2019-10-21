@@ -1,0 +1,37 @@
+<div class="da-form-row">
+	<label>Page </label>
+    <div class="da-form-item large">
+        {$extParams['page_uid']=$module.pid}
+        {$this->action('selectpage','admin','pages',$extParams)}
+    </div>
+</div>
+<div class="da-form-row">
+	<label>Module</label>
+    <div class="da-form-item large">
+    	<input type="text" name="f[module]" value="{$module.module}"/>
+    </div>
+</div>
+<div class="da-form-row">
+	<label>Controller</label>
+    <div class="da-form-item large">
+    	<input type="text" name="f[controller]" value="{$module.controller}"/>
+    </div>
+</div>
+<div class="da-form-row">
+	<label>Action</label>
+    <div class="da-form-item large">
+    	<input type="text" name="f[action]" value="{$module.action}"/>
+    </div>
+</div>
+ <div class="da-form-row">
+	<label>Params</label>
+    <div class="da-form-item large">
+    	<input type="text" name="params" value="{$module.params}"/>
+    </div>
+</div>
+ <div class="da-form-row">
+	<label>Hidden</label>
+    <div class="da-form-item large">
+    	<input type="checkbox" name="f[hidden]" value="1" {if $module.hidden eq 1}checked{/if}/>
+    </div>
+</div>

@@ -1,0 +1,159 @@
+<script src="/assets/video/flowplayer-3.2.11.min.js"></script>
+<script src="/assets/video/player.ipad-3.2.11.min.js"></script>
+
+<div class="section-center">
+    <div class="grid_11">
+            <div class="video">
+            <div class="profile" style="clear: both;overflow:hidden;display:none">
+                {if $user.provider =='facebook'}
+                <img class="fb-wall-avatar" style="float: left;margin-right:10px;" src="https://graph.facebook.com/{$user.provider_id}/picture?type=normal">
+                {elseif $user.provider == 'twitter'}
+                <img src="https://api.twitter.com/1/users/profile_image?screen_name={$user.tw_screen_name}&size=bigger">
+                {/if}
+               <table>
+                    <tr>
+                        <td>Nama</td>
+                        <td>:</td>
+                        <td>{$user.name}</td>
+                    </tr>
+                    <tr>
+                        <td>url</td>
+                        <td>:</td>
+                        <td>http://livenu.dev.pusatmedia.com{$baseUrl}/{$user.nicename}</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>:</td>
+                        <td>{$user.email}</td>
+                    </tr>
+                </table>
+            </div>
+                <div class="csc-header">
+                    <h1>{$user.name} Videos</h1>
+                </div>
+                <h3>Publised by <strong>{$user.name}</strong> on 15 Juli 2012</h3>
+                <div class="box">
+                
+                <div style="display:block;width:631px;height:351px;" id="player"></div>
+                </div>
+                <div class="social-media">
+                        <ul>
+                            <li><a href="#"><img src="{$tplpath}images/fblike.jpg" alt="" title="" /></a></li>
+                            <li><a href="#"><img src="{$tplpath}images/tweet.jpg" alt="" title="" /></a></li>
+                            <li><a href="#"><img src="{$tplpath}images/gplus.jpg" alt="" title="" /></a></li>
+                        </ul>
+                        <span><strong>2,538,927</strong> view</span>
+                    </div>
+            </div>
+            <div class="tabs">
+                <ul class="tabNavigation">
+                    <li><a href="#tab1">Semua Komentar</a></li>
+                </ul>
+                <div id="tab1" class="tab_content">
+                    <div class="tab-content">
+                        <div class="comment" id="commentform">
+                            <h2>Berikan Komentar</h2>
+                            <form action="" method="post" >
+                                <input type="hidden" id="parent" value="{$postdetail.ID}" />
+                                <input type="hidden" name="comment_parent" id="parent_comment" value="" />
+                                {if $smarty.session.Default.user.ID} 
+                                    {if $smarty.session.Default.user.provider =='facebook'}
+                                    <img class="fb-wall-avatar" src="https://graph.facebook.com/{$smarty.session.Default.user.provider_id}/picture?type=square">
+                                    {elseif $smarty.session.Default.user.provider == 'twitter'}
+                                    <img src="https://api.twitter.com/1/users/profile_image?screen_name={$smarty.session.Default.user.tw_screen_name}&size=bigger">
+                                    {/if}
+                                {else}
+                                    <img src="{$tplpath}images/img-default.jpg" alt="" title="" />
+                                {/if}
+                                <textarea id="msg" onblur="{literal}if(this.value==''){this.value=this.defaultValue;}{/literal}" onfocus="{literal}if(this.value==this.defaultValue){this.value='';}{/literal}">{if $smarty.session.Default.user.ID} Write your comment {else}Sign In Or Sign up now to post a comment!{/if}</textarea>
+                                <div class="loading-bar hide"></div>
+                                <input type="submit" value="Kirim" class="commentbtn" />
+                            </form>
+                        </div> 
+                        <div class="list-comment">
+                            <div class="head-comment">
+                                <h1>0 Komentar</h1>
+                                <ul>
+                                    <li><a href="#" class="selected">Terbaru</a></li>
+                                    <li><a href="#" >Terlama</a></li>
+                                    <li><a href="#" >Balasan Terbanyak</a></li>
+                                </ul>
+                            </div>
+                            <ul class="listcomment">
+                                <li><div class="loading-bar center" style="display: none;"></div></li>                                    
+                            </ul>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div id="tab2" class="tab_content">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="grid_5">
+        <div class="adv adv1">
+    <img src="{$tplpath}images/banner3.jpg" alt="" title="" />
+</div>
+<div class="adv">
+    <img src="{$tplpath}images/banner4.jpg" alt="" title="" />
+</div>
+<div class="livestream">
+    <h1>LIVE STREAMING FROM THIS CHANNEL</h1>
+    <ul>
+        <li>
+            <img src="{$tplpath}images/stream.jpg" alt="" title="" />
+            <h2>Team Work - Birds or People? Find Out</h2>
+            <span>by Riris</span>
+            <p>3,000,000 views</p>
+        </li>
+        <li>
+            <img src="{$tplpath}images/stream.jpg" alt="" title="" />
+            <h2>Team Work - Birds or People? Find Out</h2>
+            <span>by Riris</span>
+            <p>3,000,000 views</p>
+        </li>
+        <li>
+            <img src="{$tplpath}images/stream.jpg" alt="" title="" />
+            <h2>Team Work - Birds or People? Find Out</h2>
+            <span>by Riris</span>
+            <p>3,000,000 views</p>
+        </li>
+        <li>
+            <img src="{$tplpath}images/stream.jpg" alt="" title="" />
+            <h2>Team Work - Birds or People? Find Out</h2>
+            <span>by Riris</span>
+            <p>3,000,000 views</p>
+        </li>
+    </ul>
+    <a href="#">View All</a>
+</div>
+        </div>
+</div>
+{literal}
+<script>
+
+if (is_ipad || is_iphone) {
+    flowplayer("player", "/assets/video/flowplayer-3.2.15.swf",{
+    clip:{autoPlay: false, autoBuffering: true ,url:"/assets/video/Dolby-Digital-HD-Test.mp4"}
+    }).ipad({ simulateiDevice: true, controls: true }); 
+}
+else if (is_android) { rtspPlayer(); }
+else if (is_webos) { rtspPlayer(); }
+else if (is_blackberry) { rtspPlayer(); }
+else if (is_playstation) { mainPlayer()}
+else { mainPlayer(); }
+function mainPlayer() {
+   flowplayer("player", "/assets/video/flowplayer-3.2.15.swf",{
+   // clip:{autoPlay: false, autoBuffering: true ,url:"/assets/video/Dolby-Digital-HD-Test.mp4"}
+    clip:{autoPlay: false, autoBuffering: true ,url:"/assets/clips/videos/1350965991f23c0.flv"}
+    }); 
+} 
+function rtspPlayer()
+{
+  //$('#player').html('<a href="/assets/video/Dolby-Digital-HD-Test.mp4"><img src="{/literal}{$tplpath}{literal}images/video.jpg"></a>');
+  $('#player').html('<a href="rtsp://103.6.204.155:1935/blackberry/livenu.sdp"><img src="{/literal}{$tplpath}{literal}images/video.jpg"></a>');
+  
+}
+</script>
+{/literal}

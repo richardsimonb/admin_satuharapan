@@ -1,0 +1,80 @@
+<div class="row">
+    <div class="span12">
+        <table class="table table-hover">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Birthday</th>
+                <th>Gender</th>
+                <th>Registered</th>
+                <th>Level</th>
+                <th>Provider</th>
+                <th>Provider ID</th>
+                <th>Twitter Screen Name</th>
+                <th>Action</th>
+            </tr>
+            {foreach from=$users item=row}
+            <tr>
+                <td>{$row.name}</td>
+                <td>{$row.email}</td>
+                <td>{$row.birthday}</td>
+                <td>{$row.gender}</td>
+                <td>{$row.registered}</td>
+                <td>{$row.level}</td>
+                <td>{$row.provider}</td>
+                <td>{$row.provider_id}</td>.
+                <td>{$row.tw_screen_name}</td>
+                <td>
+                        <div class="btn-group">
+                            <a class="btn btn-primary" href="#"><i class="icon-user icon-white"></i> User</a>
+                            <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
+                            <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+                            <li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"><i class="i"></i> Make admin</a></li>
+                        </ul>
+                        </div>
+                </td>
+            </tr>
+            {/foreach}
+        </table>
+            <div class="pagination">
+                <ul>
+                    {paginate_first id=$id_paging target="_self"} 
+                    {paginate_prev id=$id_paging target="_self"}
+                    {paginate_middle format="page" prefix=" " suffix=" " page_limit="5" id=$id_paging target="_self"}
+                    {paginate_next id=$id_paging target="_self"}
+                    {paginate_last id=$id_paging target="_self"}
+                </ul> 
+            </div>                        
+            <!--
+            <div class="pagination">
+                <ul>
+                    {* previous *}
+                    {if $page ne 1}
+                      <li><a href="{$viewUrl}/?page={$page - 1}">Previous</a></li>
+                    {else}
+                      <li  class="disabled"><a href="">&lt; Previous</a></li>
+                    {/if}
+                    
+                     {* numbered this *}
+                    {section name=foo loop=$totalpageWaiting}
+                        {if $page eq $smarty.section.foo.iteration}
+                            <li class="active"><a href="#">{$smarty.section.foo.iteration}</a></li>
+                        {else}
+                            <li><a href="{$viewUrl}/?page={$smarty.section.foo.iteration}">{$smarty.section.foo.iteration}</a></li>
+                        {/if}
+                    {/section}
+                    {* next *}
+                    {if $page lt $totalpageWaiting}
+                        <li><a href="{$viewUrl}/?page={$page + 1}">Next</a></li>
+                    {else}
+                       <li class="disabled"><a href="#">Next</a></li>
+                    {/if}                   
+                </ul>                
+            </div>
+            -->
+    </div>
+</div>

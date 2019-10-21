@@ -1,0 +1,89 @@
+<div class="box grid_16">
+	<h2 class="box_head">Update Account</h2>
+	<a href="#" class="grabber">&nbsp;</a>
+	<a href="#" class="toggle">&nbsp;</a>
+    <form method="post" action="">
+    	<div class="toggle_container">
+    		<div class="block">
+    			<fieldset class="label_side">
+    				<label>Provider</label>
+    				<div>
+    					{$user.provider}
+    				</div>
+    			</fieldset>
+                <fieldset class="label_side">
+    				<label>Provider ID</label>
+    				<div>
+    					<input type="text" name="f[provider_id]" value="{$user.provider_id}">
+    				</div>
+    			</fieldset>
+                <fieldset class="label_side">
+    				<label>Username</label>
+    				<div>
+    					<input type="text" name="f[username]" value="{$user.username}">
+    				</div>
+    			</fieldset>
+                <fieldset class="label_side">
+    				<label>Password</label>
+    				<div>
+    					<input type="password" name="password" value="">
+    				</div>
+    			</fieldset>
+                <fieldset class="label_side">
+    				<label>Retype Password</label>
+    				<div>
+    					<input type="password" name="repassword" value="">
+    				</div>
+    			</fieldset>
+                <!--<fieldset class="label_side">
+    				<label>Token</label>
+    				<div>
+    					<input type="text" name="f[token]" value="{$user.token}">
+    				</div>
+    			</fieldset>-->
+                <fieldset class="label_side">
+    				<label>Firstname</label>
+    				<div>
+    					<input type="text" name="f[firstname]" value="{$user.firstname}">
+    				</div>
+    			</fieldset>
+                <fieldset class="label_side">
+    				<label>Last Name</label>
+    				<div>
+    					<input type="text" name="f[lastname]" value="{$user.lastname}">
+    				</div>
+    			</fieldset>
+                <fieldset class="label_side">
+    				<label>Name</label>
+    				<div>
+    					<input type="text" name="f[name]" value="{$user.name}">
+    				</div>
+    			</fieldset>
+                <fieldset class="label_side">
+    				<label>Email</label>
+    				<div>
+    					<input type="text" name="f[email]" value="{$user.email}">
+    				</div>
+    			</fieldset>
+                <fieldset class="label_side">
+    				<label>Timezone</label>
+    				<div>
+                        <select name="f[timezone]">
+                        {foreach from=$timezones key=timezone item=val}
+                            <option {if $user.timezone eq $timezone}selected{/if}>{$timezone}</option>
+                        {/foreach}
+                        </select>
+    					
+    				</div>
+    			</fieldset>
+    			<div class="button_bar clearfix">
+                    <input type="hidden" name="update" value="1"/>
+    				<button class="green">
+    					<img height="24" width="24" alt="Bended Arrow Right" src="{$tplpath}images/icons/small/white/bended_arrow_right.png">
+    					<span>Update</span>
+    				</button>    				
+    			</div>
+    		</div>
+    	</div>
+    </form>
+</div>

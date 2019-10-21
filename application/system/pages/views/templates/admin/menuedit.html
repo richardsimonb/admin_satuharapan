@@ -1,0 +1,31 @@
+<div class="grid_4">
+    <div class="da-panel">
+        {if $alert}
+        <div class="da-message {$alert.status}">
+            {$alert.message}
+        </div>
+        {/if}
+    </div>
+</div>
+<div class="grid_4">
+	<div class="da-panel">
+        
+    	<div class="da-panel-header">
+        	<span class="da-panel-title">
+                <img src="{$tplpath}images/icons/black/16/pencil.png" alt="" />
+                Edit page
+            </span>
+        </div>
+        
+        <div class="da-panel-content">
+        	<form class="da-form" action="" method="post">
+            	{$this->render('partial/rowformmenu.html')}
+                <div class="da-button-row">
+                    <a href="{$baseUrl}/pages/admin/menu" class="da-button gray left">Back</a>
+                	<input type="reset" value="Reset" class="da-button gray left" />
+                	<input type="submit" value="Update" class="da-button blue" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+{literal}
+<script type="text/javascript">
+var  baseUrl = "{/literal}{$baseUrl}{literal}/";
+$(function() {
+	$("#tree").treeview({
+		collapsed: false,
+		animated: "medium",
+		control:"#sidetreecontrol",
+		persist: "location"
+	});
+  
+   $(".menudel").click(function() { //begin
+        var uid =  $(this).attr("rowuid");
+        jConfirm('Are you sure you want to delete this item?', 'Confirmation', function(r) {
+            if(r){
+                    
+                    $("#loading_overlay").show();  
+            	    $.ajax({                        
+                        url: baseUrl+"pages/admin/menudel/uid/"+ uid,
+                        type: 'GET',
+                        async: true,
+                        success: function (data) {
+                                    $("#"+uid).remove();
+                                    $("#loading_overlay").hide();
+                                    //window.parent.document.location.reload();
+                            },           
+                        });
+            } //end jconfirm r== true
+        });
+    return false; 
+    }); //end 
+});
+</script>
+{/literal}
+    
+
+<div id="sidetree">
+<div class="treeheader">&nbsp;</div>
+<div id="sidetreecontrol"><a href="?#"  class="da-ex-buttons">Collapse All</a> | <a href="?#"  class="da-ex-buttons">Expand All</a></div>
+<ul id="tree">
+    <li><a href="#">Root</a>
+        <span><a href="#"><img src="{$tplpath}images/icons/color/add.png"></a></span>
+        <ul  class="closed">        
+        {foreach from=$menu item=list}            
+                <li id="{$list.uid}"><a href="{$baseUrl}/pages/admin/module/page_id/{$list.uid}" title="{$list.title}">{$list.title}</a>
+                    <span class="crud_pages">
+                        <a href="{$baseUrl}/pages/admin/menuedit/uid/{$list.uid}" ><img src="{$tplpath}images/icons/color/pencil.png"></a>
+                        <a href="{$baseUrl}/pages/admin/menuadd/uid/{$list.uid}" ><img src="{$tplpath}images/icons/color/add.png"></a>
+                        <a href="#" class="menudel" rowuid="{$list.uid}"><img src="{$tplpath}images/icons/color/cross.png"></a>
+                    </span>
+                </li>
+        {/foreach}
+        </ul>
+    </li>
+</ul>
+
+</div>

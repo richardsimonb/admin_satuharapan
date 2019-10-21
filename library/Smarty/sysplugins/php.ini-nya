@@ -1,0 +1,6 @@
+memory_limit=512M
+extension=pdo.so
+extension=pdo_mysql.so
+
+extension=php_pdo.dll 
+extension=php_pdo_mssql.dll 

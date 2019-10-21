@@ -1,0 +1,43 @@
+<div class="grid_4">
+    <div class="da-panel">
+        <div class="da-panel-content">
+            <form class="da-form" action="" method="post" enctype="multipart/form-data">
+                <input type="file" class="input-medium search-query" name="file">
+                <button type="submit"  class="da-button red" name="update">Upload </button>
+            </form>
+         </div>   
+    </div>
+</div>
+<div class="grid_4">
+    <div class="da-panel collapsible scrollable">
+        <div class="da-panel-header">
+        	<span class="da-panel-title">
+                <img src="{$tplpath}images/icons/black/16/list.png" alt="" />
+                Listing Modules
+            </span>
+            
+        </div>
+        <div class="da-panel-content">
+          <table class="da-table">
+            <tr>
+                <th>Application</th>
+                <th>Version</th>
+                <th>Author</th>
+                <th>Action</th>
+            </tr>
+            {foreach from=$module key=md item=row}
+            <tr>
+                <td><a href="{$baseUrl}/{$md}/admin">{$md|upper}</a></td>
+                <td></td>
+                <td></td>
+                <td class="da-icon-column">
+                	<a href="{$baseUrl}/admin/module/download/name/{$md}"><img src="{$tplpath}images/icons/color/disk.png"></a>
+                	<a href="{$baseUrl}/admin/module/delete/name/{$md}"><img src="{$tplpath}images/icons/color/cross.png"></a>
+                </td>
+                
+            </tr>
+            {/foreach}
+          </table>
+       </div>   
+    </div>
+</div>

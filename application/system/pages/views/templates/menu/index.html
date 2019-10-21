@@ -1,0 +1,5 @@
+<ul id="nav" class="nav">        
+{foreach from=$menu item=list}            
+        <li><a href="{$baseUrl}/{$list.alias}" title="{$list.title}">{$list.title}</a></li>
+{/foreach}
+</ul>

@@ -1,0 +1,29 @@
+{if $smarty.get.message}
+{$message}
+{/if}
+<div class="container_12">
+    <div class="grid_12">
+        <div class="cleft upload">
+            <h1>Please Login First</h1>
+            <div class="logged" style="">
+                <h2>BELUM MENJADI ANGGOTA?</h2>
+                <ul>
+                    <li><a href="/users/index/loginfb" class="fb">Facebook</a></li>
+                    <li><a href="/users/index/logintw" class="tw">Twitter</a></li>
+                </ul>
+                <form action="/users/index/login" method="post">
+                    <p>
+                        <label>Email</label>
+                        <input name="email" type="text" />
+                    </p>
+                    <p>
+                        <label>Password</label>
+                        <input name="password" type="password" />
+                    </p>
+                    <span><input value="Login" type="submit" /></span>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

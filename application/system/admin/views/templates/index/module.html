@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="span12">
+          <table class="table table-hover">
+            <tr>
+                <th>Module</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>Admin module</td>
+                <td>
+                     <div class="btn-group">
+                        <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{$baseUrl}/admin/posts/edit/id/{$row.ID}"><i class="icon-edit"></i> Update</a></li>
+                            <li><a href="{$baseUrl}/admin/module/download"><i class="icon-arrow-down"></i> Download</a></li>
+                            <li><a href="{$viewUrl}/?act=trash&id={$row.ID}"><i class="icon-trash"></i> Delete</a></li>
+                        </ul>
+
+                    </div>
+                </td>
+            </tr>
+          </table>
+    </div>
+</div>

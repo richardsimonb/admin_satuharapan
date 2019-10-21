@@ -1,0 +1,36 @@
+<p>
+    <label for="mail">Email</label>
+    <input id="mail" type="text" name="email" value="{$useredit.email}"/>
+    </p>
+    
+    <p>
+    <label for="name">Nama</label>
+    <input id="name" type="text" name="name" value="{$useredit.name}"/>
+    </p>
+     <p>
+    <label for="name">Password</label>
+    <input id="name" type="password" name="password" value="{$useredit.password}"/>
+    </p>
+    <p>
+    <label for="name">Ketik Ulang Password</label>
+    <input id="name" type="password" name="repassword" value=""/>
+    </p>
+    <p>
+    <label for="name">Telp</label>
+    <input id="telp" type="text" name="telp" value="{$useredit.phone}"/>
+    </p>
+    <p>
+    <label for="dob">Birthday</label>
+    <span><input id="dob" type="text" name="birthday" value="{$useredit.birthday}"/></span>
+    </p>
+    <p>
+    <label for="desc">Deskripsi</label>
+    <input id="desc" type="text" name="description" value="{$useredit.description}" />
+    </p>
+    <p>
+    <label>Jenis Kelamin</label>
+    <select name="gender">
+        <option value="male" {if $useredit.gender eq 'male'}selected="" {/if}>Laki-Laki</option>
+        <option value="female" {if $useredit.gender eq 'femal'}selected="" {/if}>Perempuan</option>
+    </select>
+</p>

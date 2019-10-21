@@ -1,0 +1,107 @@
+<div class="control-group">
+    <label class="control-label" >Post Type</label>
+    <div class="controls controls-row">
+        <select name="f[post_type]" class="span2" >
+            <option value="" >Select</option>
+            {foreach from=$postType item=row}
+                <option value="{$row.post_type}" {if $detail.post_type eq $row.post_type}selected{/if}>{$row.post_type}</option>
+            {/foreach}
+        </select>
+        <div class="span1">Or new type </div>
+         <input class="span2" type="text" name="newPostType" />
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" >Post Mime Type</label>
+    <div class="controls controls-row">
+        <select name="f[post_mime_type]" class="span2" >
+            <option value="" >Select</option>
+            {foreach from=$mimeType item=row}
+                <option value="{$row.post_mime_type}" {if $detail.post_mime_type eq $row.post_mime_type}selected{/if}>{$row.post_mime_type}</option>
+            {/foreach}
+        </select>
+        <div class="span1">Or new mime type </div>
+         <input class="span2" type="text" name="newMimeType" />
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" >Post Date</label>
+    <div class="controls">
+        <input type="text" name="f[post_date]" class="datepicker" value="{$detail.post_date}" />
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" >Post Date End</label>
+    <div class="controls">
+        <input type="text" name="f[post_date_end]" class="datepicker" value="{$detail.post_date_end}" />
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" >Title</label>
+    <div class="controls controls-row">
+        <input type="text" name="f[post_title]"  class="span5" value="{$detail.post_title}" />
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" >Content</label>
+    <div class="controls controls-row"">
+        <div class="span5">
+            <textarea name="f[post_content]" cols="100">{$detail.post_content}</textarea>
+        </div>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" >Status</label>
+    <div class="controls controls-row">
+        <select name="f[post_status]" class="span2" >
+            {foreach from=$poststatus item=row}
+                <option value="{$row.post_status}" {if $detail.post_status eq $row.post_status}selected{/if}>{$row.post_status}</option>
+            {/foreach}
+        </select>
+        <div class="span1">Or new status </div>
+         <input class="span2" type="text" name="newStatus" />
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" >Comment Status</label>
+    <div class="controls">
+        <select name="f[comment_status]">
+            <option value="">Select Status</option>
+        </select>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" >File</label>
+    <div class="controls">
+        <input type="file" name="file"/>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" ></label>
+    <div class="controls">
+           {if $detail.post_mime_type eq 'kacrut'}
+            <div class="box">
+            <a  href="{$baseUrl}/tmp/media/{$detail.post_media}" style="display:block;width:160px;height:92px"  id="player{$detail.ID}"> </a>
+            {literal}
+        	<script>
+        		flowplayer("player{/literal}{$detail.ID}{literal}", {
+        		      src : "{/literal}{$tplpath}{literal}video/flowplayer-3.2.15.swf",
+                      wmode: "transparent"
+                },{
+                  clip:  {
+                      autoPlay: false,
+                      autoBuffering: true
+                  }});
+        	</script>
+           {/literal}
+           </div>
+           <a href="{$baseUrl}/index/play/id/{$detail.ID}" class="fancybox fancybox.ajax">Play</a>
+         {else} 
+             
+             <div class="box">
+               <a href="{$baseUrl}/posts/view/id/{$detail.ID}" ><img src="{$baseUrl}/index/image/filename/{$detail.post_media}"/></a>
+             </div>
+             <!--<a href="{$baseUrl}/index/play/id/{$row.ID}" class="fancybox fancybox.ajax">Play</a>-->
+        {/if}
+    </div>
+</div>

@@ -1,0 +1,71 @@
+
+            {if $smarty.session.Default.user.uid ne $params.uid}
+            <div class="control-group">
+                <label class="control-label" >Disable</label>
+                <div class="controls">
+                {if isset($detail) AND $detail.disable}
+                	<input type="checkbox" name="f[disable]" value="1" checked="checked">
+                {else}
+                	<input type="checkbox" name="f[disable]" value="1">
+                {/if}                	
+                </div>
+            </div>
+            {/if}
+            <div class="control-group">
+                <label class="control-label" >Username</label>
+                <div class="controls">
+                <input type="text" name="f[username]" value="{if isset($detail)}{$detail.username}{/if}" required="">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" >Password</label>
+                <div class="controls">
+                <input type="text" name="f[password]" value="{if isset($detail)}{$detail.password}{/if}" required>
+                </div>
+            </div>
+            
+            {if $smarty.session.Default.user.usergroup eq 3} <!-- jika user  adalah direksi -->
+            <div class="control-group">
+                <label class="control-label" >User Type</label>
+                <div class="controls">
+                <select name="f[usergroup]">
+                    {foreach from=$groups item=group}
+                    	 {if $smarty.session.Default.user.usergroup eq 2}
+                    	 	{if $group.uid eq 1}
+                    		<option value="{$group.uid}" {if isset($detail) && $detail.usergroup eq $group.uid}selected=""{/if}>{$group.title}</option>
+                    		{/if}
+                    	 {else}	
+        	                <option value="{$group.uid}" {if isset($detail) && $detail.usergroup eq $group.uid}selected=""{/if}>{$group.title}</option>
+                    	 {/if}
+                    {/foreach}
+                </select>
+                </div>
+            </div>  
+            {/if}          
+
+            <div class="control-group">
+                <label class="control-label" >Name</label>
+                <div class="controls">
+                <input type="text" name="f[name]" value="{if isset($detail)}{$detail.name}{/if}" required>
+                </div>
+            </div>
+           
+            <div class="control-group">
+                <label class="control-label" >Address</label>
+                <div class="controls">
+                <input type="text" name="f[address]" value="{if isset($detail)}{$detail.address}{/if}">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" >Telephone</label>
+                <div class="controls">
+                <input type="text" name="f[telephone]" value="{if isset($detail)}{$detail.telephone}{/if}">
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <label class="control-label" >Email</label>
+                <div class="controls">
+                <input type="email" name="f[email]" value="{if isset($detail)}{$detail.email}{/if}" >
+                </div>
+            </div>

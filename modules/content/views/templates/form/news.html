@@ -1,0 +1,58 @@
+<ul id="myTab" class="nav nav-tabs">
+          <li class="active"><a href="#general" data-toggle="tab">General</a></li>
+          
+          <li><a href="#access" data-toggle="tab">Access </a></li>
+        </ul>
+        
+        <div id="myTabContent" class="tab-content">
+          <div class="tab-pane fade in active" id="general">   
+            {if $smarty.session.Default.user.usergroup ne 1}
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">Hidden</label>
+                <div class="controls">
+                    <input type="checkbox" name="f[hidden]" value="1" {if isset($detail) && $detail.hidden eq 1}checked=""{/if} />
+                </div>
+            </div>
+            {/if}
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">Create date:</label>
+                <div class="controls">
+                    <input type="text" class="spa5 datetimepicker" name="crdate" value="{if isset($detail)}{$detail.crdate|date_format:"%d-%m-%Y %H:%M"}{/if}">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">Title</label>
+                <div class="controls">
+                    <input type="text" class="span5" value="{if isset($detail)}{$detail.header}{/if}" name="f[header]" >
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">Text</label>
+                <div class="controls">
+                    <textarea name="f[bodytext]" class="ckeditor" id="editor1">{if isset($detail)}{$detail.bodytext}{/if}</textarea>
+                </div>
+            </div>
+          </div>
+          
+          <div class="tab-pane fade" id="access">
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">Start:</label>
+                <div class="controls">
+                    <input type="text" class="datepicker" value="{if isset($detail) && $detail.starttime !=0}{$detail.starttime|date_format:"%d-%m-%Y"}{/if}" name="starttime">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">Stop:</label>
+                <div class="controls">
+                    <input type="text" class="datepicker" value="{if isset($detail) && $detail.endtime !=0}{$detail.endtime|date_format:"%d-%m-%Y"}{/if}" name="endtime">
+                </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="modal-footer">
+        	<input type="submit" class="btn btn-primary " value="SAVE" />
+		</div>
+		
+

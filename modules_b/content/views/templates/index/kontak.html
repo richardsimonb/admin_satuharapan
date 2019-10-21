@@ -1,0 +1,132 @@
+{literal}
+<script>
+    $(function() {
+        $( ".datePicker" ).datepicker({
+            changeMonth: true,
+            changeYear: true,
+            dateFormat: "dd/mm/yy"
+        });    
+    });
+    
+</script>
+{/literal}
+
+    <form method="post" action="" enctype="multipart/form-data" style="display: none;">
+        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3 id="myModalLabel">Upload data</h3>
+            </div>
+            <div class="modal-body">
+             <div class="control-group">
+                <div class="controls">
+                    <input type="file" name="excelfile" >
+                </div>
+             </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                <button class="btn btn-primary">Upload</button>
+            </div>
+        </div>     
+    </form>
+    <!--
+    <form class="form-inline" method="get" action="" id="form-search">
+        <input type="text" value="{if isset($smarty.get.title)}{$smarty.get.title}{/if}" placeholder="Header" name="header">
+        <input type="text" value="{if isset($smarty.get.rang_date_1)}{$smarty.get.rang_date_1}{/if}" placeholder="Created start" class="datePicker" name="rang_date_1">
+        <input type="text" value="{if isset($smarty.get.rang_date_2)}{$smarty.get.rang_date_2}{/if}" placeholder="Created end" class="datePicker" name="date_rang2">
+        <button type="submit" class="btn btn-success">Search</button>
+        
+        <a href="{$baseUrl}/content/index/pagesnew" class="btn btn-primary" >New</a>
+    </form>
+    -->
+  	<div class="page-header"><h4>Kontak Redaksi</h4></div>
+    
+    <form action="" method="post" id="form-users">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th><input type="checkbox" class="checkall"/></th>
+          <th>Tanggal</th>
+          <th>Pesan </th>
+        </tr>
+      </thead>
+      <tbody>
+      {if $numrows lt 1}
+      <tr><td colspan="7"><div class="alert">Data Not Found</div></td></tr>
+      {/if}
+       {foreach from=$rows item=row}
+        <tr class="{$row.uid}">
+          <td><input type="checkbox" name="uid[]" value="{$row.uid}"  class="child-checked"/></td>          
+          <td>{$row.crdate|date_format:"%d-%m-%Y %H:%M"}</td>
+          <td>{$row.content}</td>
+        </tr>
+       {/foreach}
+      </tbody>
+    </table>
+    </form>
+    {if $numrows > 0}
+    	<div class="delete-all">
+    		<a href="javascript:void(0);" id="remove-all" class="btn btn-danger"><i class="icon-remove icon-white"></i>&nbsp;Delete</a>
+    	</div>
+    {/if}    
+    {if $totalpage gt 1}    
+    <div class="pagination">
+    
+    	<div class="page">
+	        <ul>
+	            {paginate_first id=$id_paging target="_self"} 
+	            {paginate_prev id=$id_paging target="_self"}
+	            {paginate_middle format="page" prefix=" " suffix=" " page_limit="5" id=$id_paging target="_self"}
+	            {paginate_next id=$id_paging target="_self"}
+	            {paginate_last id=$id_paging target="_self"}
+	        </ul> 
+        </div>
+    </div> 
+    {/if}
+ 
+{literal}
+<script type="text/javascript">
+$(document).ready(function() {     
+    var  baseUrl = "{/literal}{$baseUrl}{literal}/";
+    $('.checkall').click(function () {
+	   $(this).parents('table:eq(0)').find(':checkbox').attr('checked', this.checked);
+	});
+    
+    
+    $("#remove-all").click(function() { //begin
+      
+                 var checkeditems = $('input:checkbox[name="uid[]"]:checked')
+                       .map(function() { return $(this).val() })
+                       .get()
+                       .join(",");                      
+                    var substr = checkeditems.split(',');
+                    console.log(substr);
+                    //alert(substr.length);  
+                    var datastring = $('#form-users').serialize();
+                    var i;
+                    $("#loading_overlay").show();  
+            		    
+                    $.ajax({                        
+                        url: baseUrl+"content/index/kontak/act/delete",
+                        type: 'POST',
+                        data: datastring,
+                        async: true,
+                        success: function (data) {
+                                    var i;
+                                    for (i = 0; i < substr.length; ++i) {
+                                        $("." +substr[i]).fadeOut(500, function() {
+                        					$("."+substr[i]).remove();
+                        				});
+                                    }
+                                    $("#loading_overlay").hide();
+                                    //window.parent.document.location.reload();
+                            },           
+                        });
+           
+    return false; 
+    }); //end 
+       
+});
+</script>
+{/literal}

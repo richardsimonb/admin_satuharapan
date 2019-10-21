@@ -1,0 +1,5 @@
+<select name="f[pid]"> 
+	{foreach from=$page item=row}
+        <option value="{$row.uid}" {if $params.page_uid eq $row.uid}selected{/if}>{$row.title}</option>
+    {/foreach}
+</select>

@@ -1,0 +1,60 @@
+body{font-size: 13px;}
+.content {background: #F8F8F8;}
+.right-content {margin-left: 15px;}
+.news-cat-left a {font-weight: bold;}
+.news-cat-left a:hover{text-decoration: none;}
+.navbar .brand {padding: 5px 0 0 20px;}
+.news-cat-left {background: none repeat scroll 0 0 #DDDDDD;border: 1px solid #CCCCCC;padding-top: 10px;margin: 5px 0 0 5px;}
+.pagination .delete-all {float: left;margin-top: -15px;width: 100px;}
+.pagination .page {float: right;margin-top: -15px;width: 300px;text-align: right;}
+footer{background: #1A1A1A; height: 35px;line-height: 32px; color: #fff;}
+footer p {text-align: center;font-weight: bold;}
+.home-top-bar {margin-top: 20px;}
+.frm-search {width: 550px;float: left;height: 40px;}
+.btn-addnew {width: 105px;float: right;}
+.txt-search {height: 20px;}
+.list-news {float: left;width: 100%;margin-bottom: 0px;}
+.page-header{border-bottom:2px solid #EEEEEE;color: #F37C43;margin-bottom: 15px;}
+#myTab {margin-bottom: 0px;}
+#myTabContent {background: #fff;border: 1px solid #eee;padding: 10px;border-top: none;}
+.form-horizontal .control-label {width: 100px;font-weight: bold;text-align: left;}
+.form-horizontal .controls {margin-left: 130px;margin-bottom: 10px;}
+.ui-timepicker-select {width: 100px;}
+#ui-datepicker-div {z-index: 99999 !important;}
+.hr-footer {margin: 20px 0px 0px;}
+input.span5, textarea.span5, .uneditable-input.span5 {width: 700px;}
+#media textarea, #special textarea {height: 100px;width: 500px;}
+.frm-users {background: none repeat scroll 0 0 #EEEEEE;padding: 10px;width: 500px;}
+.frm-users input[type="text"] {width: 300px;}
+
+.ui-multiselect-header ul li:first-child {display: none;}
+.ui-multiselect-filter input {width: 205px;}
+.ui-multiselect-checkboxes label span {}
+.ui-multiselect-checkboxes label input {top:-3px;margin-right: 8px;}
+
+.img-preview {margin-left: 0px; width: 440px;}
+.rel-preview {margin-left: 6px;width: 150px;}
+.top-preview  {margin-bottom: 10px;}
+.rel-preview .dttl {
+  background: none repeat scroll 0 0 #E6E6E6;
+  border-top: 4px solid #2E3192;
+  color: #2E3192;
+  font: bold 18px/40px "Calibri";
+  height: 42px;
+  padding-left: 10px;
+  width: 165px;
+}
+.rel-preview .dcon {
+  border: 1px solid #E6E6E6;
+  height: 183px;
+  overflow: auto;
+  padding: 5px;
+  width: 163px;
+  margin: 0px;
+}
+h1.title-preview {
+  color: #2E3192;
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}

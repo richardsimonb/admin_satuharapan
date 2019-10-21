@@ -1,0 +1,4 @@
+body { font:11px verdana; background:#eee; }
+a { line-height:20px; text-transform:uppercase; text-decoration:none; color:black; }
+a:hover { color:red; }
+.active > a { font-weight:bold; color:red; background:white; cursor:default; }

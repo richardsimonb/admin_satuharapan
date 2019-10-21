@@ -1,0 +1,36 @@
+<div class="da-form-row">
+	<label>Title</label>
+    <div class="da-form-item large">
+    	<input type="text" name="f[title]" value="{$row.title}"/>
+    </div>
+</div>
+<div class="da-form-row">
+	<label>Alias</label>
+    <div class="da-form-item large">
+    	<input type="text" name="f[alias]" value="{$row.alias}"/>
+    </div>
+</div>
+<div class="da-form-row">
+	<label>Description</label>
+    <div class="da-form-item large">
+    	<textarea name="f[description]">{$row.description}</textarea>
+    </div>
+</div>
+<div class="da-form-row">
+	<label>Keywords</label>
+    <div class="da-form-item large">
+    	<input type="text" name="f[keywords]" value="{$row.keywords}"/>
+    </div>
+</div>
+<div class="da-form-row">
+	<label>Url Target</label>
+    <div class="da-form-item large">
+    	<input type="text" name="f[url_target]" value="{$row.url_target}"/>
+    </div>
+</div>
+ <div class="da-form-row">
+	<label>Hidden</label>
+    <div class="da-form-item large">
+    	<input type="checkbox" name="f[hidden]" value="1" {if $row.hidden eq 1}checked{/if}/>
+    </div>
+</div>

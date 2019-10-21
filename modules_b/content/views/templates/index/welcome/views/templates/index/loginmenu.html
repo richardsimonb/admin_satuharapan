@@ -1,0 +1,19 @@
+{if isset($smarty.session.Default.user.uid)}
+<ul class="nav">
+  <li ><a href="{$baseUrl}/news">News</a></li>
+  
+  {if $smarty.session.Default.user.usergroup ne 1}
+    <li ><a href="{$baseUrl}/banner">Pages</a></li>  
+    <li ><a href="{$baseUrl}/banner">Banner</a></li>  
+    <li ><a href="{$baseUrl}/banner">IHSG dan Kurs</a></li>  
+    <li ><a href="{$baseUrl}/banner">Kontak redaksi</a></li>  
+    <li ><a href="{$baseUrl}/staff/index/list">User</a></li>
+  {/if}
+  <li ><a href="{$baseUrl}/staff/index/edit/uid/{$smarty.session.Default.user.uid}">Edit Profile</a></li>
+</ul>
+<div class="pull-right">
+	<a href="{$baseUrl}/users/index/logout" class="btn btn-danger" >Logout</a>
+</div>
+{/if}
+
+            

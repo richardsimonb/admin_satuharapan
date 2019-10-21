@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Content Management System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="{$tplpath}css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="{$tplpath}css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->        
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{$tplpath}ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{$tplpath}ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{$tplpath}ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="{$tplpath}ico/apple-touch-icon-57-precomposed.png">
+    <link href="{$tplpath}css/overlay.css" rel="stylesheet">
+    <link href="{$tplpath}css/table.css" rel="stylesheet">
+    <link href="{$tplpath}css/validation.css" rel="stylesheet">
+    {$this->headTitle()}
+    {$this->headLink()}
+    {$this->headStyle()}
+    
+    <script src="{$tplpath}js/jquery.js"></script>
+    <script src="{$tplpath}js/bootstrap-transition.js"></script>
+    <script src="{$tplpath}js/bootstrap-alert.js"></script>
+    <script src="{$tplpath}js/bootstrap-modal.js"></script>
+    <script src="{$tplpath}js/bootstrap-dropdown.js"></script>
+    <script src="{$tplpath}js/bootstrap-scrollspy.js"></script>
+    <script src="{$tplpath}js/bootstrap-tab.js"></script>
+    <script src="{$tplpath}js/bootstrap-tooltip.js"></script>
+    <script src="{$tplpath}js/bootstrap-popover.js"></script>
+    <script src="{$tplpath}js/bootstrap-button.js"></script>
+    <script src="{$tplpath}js/bootstrap-collapse.js"></script>
+    <script src="{$tplpath}js/bootstrap-carousel.js"></script>
+    <script src="{$tplpath}js/bootstrap-typeahead.js"></script>
+    <script src="{$tplpath}js/jquery.validate.min.js"></script>
+    <!--<link rel="stylesheet" href="{$tplpath}css/jquery-ui.1.9.2.css" />-->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+    
+    <link rel="stylesheet" href="{$tplpath}css/jquery-ui-timepicker-addon.css" />
+    <link rel="stylesheet" href="{$tplpath}js/select2/select2.css" />
+    <!--<script src="{$tplpath}js/jquery-ui-1.9.2.js"></script>-->
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="{$tplpath}js/jquery-ui-timepicker-addon.js"></script>
+    
+    <script type="text/javascript" src="{$tplpath}js/typehead/typeahead.min.js"></script>
+    <script type="text/javascript" src="{$tplpath}js/select2/select2.min.js"></script>
+    <script type="text/javascript" src="{$tplpath}js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<link rel="stylesheet" type="text/css" href="{$tplpath}js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+	
+	
+    {literal}
+    <script>
+        $(function() {            
+                $( ".datepicker" ).datepicker( {dateFormat:"dd-mm-yy"} );
+                $('.datetimepicker').datetimepicker({                
+                    dateFormat:"dd-mm-yy",
+                    controlType: 'select',                	
+                });
+        });
+        $(function() {
+	        	$(".fancybox").fancybox({
+	        		maxWidth	: 800,
+	        		maxHeight	: 600,
+	        		fitToView	: false,
+	        		width		: '30%',
+	        		height		: '30%',
+	        		autoSize	: true,
+	        		closeClick	: false,
+	                type :"ajax",
+	                wrapCSS : "popup-wrap"
+	        	});
+	        });
+    </script>
+    {/literal}
+    
+    {$this->headScript()}
+    
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="http://www.satuharapan.com/" target="_blank">
+          	<img src="{$tplpath}images/typo3logo-white.png" />
+          </a>
+          <div class="nav-collapse collapse">          	
+            	 {$this->action('loginmenu','index','welcome')}
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container content">
+    	<div class="row">
+    		<div class="span2 left-content">
+    			{$this->action('leftmenu','index','news')}	
+    		</div>
+    		<div class="span10 right-content">
+    			{$this->layout()->content}		
+    		</div>
+    		
+    	</div>
+        
+      
+
+      <hr class="hr-footer">
+
+      <footer>
+        <p>Copyright © 2012 | satuharapan.com</p>
+      </footer>
+
+    </div> <!-- /container -->
+    <div id="loading_overlay" style="display: none;">
+    	<div class="loading_message">
+    		<img src="{$tplpath}img/loading.gif"   alt="loading" />
+    	</div>
+    </div>    
+    
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+   <link href="{$tplpath}css/overide.css" rel="stylesheet">
+  </body>
+</html>

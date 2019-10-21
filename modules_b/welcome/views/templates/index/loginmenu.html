@@ -1,0 +1,29 @@
+<ul class="nav">
+  <li><a href="{$baseUrl}/news">News</a></li>  
+  {if $smarty.session.Default.user.usergroup ne 1}
+    <li ><a href="{$baseUrl}/content/index/pages">Pages</a></li>  
+    <!-- <li> <a href="{$baseUrl}/banner">Banners</a></li> -->  
+    <li ><a href="{$baseUrl}/content/index/edit/uid/302">IHSG & Kurs</a></li>  
+    <li ><a href="{$baseUrl}/content/index/kontak">Kontak redaksi</a></li>  
+    <li ><a href="{$baseUrl}/staff/index/list">Users</a></li>
+  {/if}  
+</ul>
+{if isset($smarty.session.Default.user.uid)}
+
+<!--  Logged in as <a class="navbar-link" href="{$baseUrl}/staff/index/edit/uid/{$smarty.session.Default.user.uid}">{$smarty.session.Default.user.name}</a>-->
+<ul class="nav pull-right" >
+     <li class="dropdown">      	
+      <a data-toggle="dropdown" class="dropdown-toggle" href="#">Logged in as : {$smarty.session.Default.user.name} <b class="caret"></b></a>
+      <ul class="dropdown-menu">           
+        <li><a href="{$baseUrl}/staff/index/edit">My Profile</a></li>
+        {if $smarty.session.Default.user.usergroup == 3}
+        	<li><a href="{$baseUrl}/news/index/clearcache">Clear Cache</a></li>
+        {/if}
+        <li class="divider"></li>
+        <li><a href="{$baseUrl}/users/index/logout" >Logout</a></li>
+      </ul>
+    </li>
+  </ul>
+{/if}
+
+            

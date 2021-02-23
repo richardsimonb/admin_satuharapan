@@ -115,7 +115,21 @@ class news_IndexController extends Ext_Controller_Action
 												 $listPerPage, 
 												 $page=0,
 												 $join
-											 );
+                                             );
+                                             
+    // echo "<pre>";print_r($this->news->getList(
+    //     $selectField=array(), 
+    //     $objectRelation=array(), 
+    //     $where, 
+    //     $orderByField, 
+    //     $offset, 
+    //     $listPerPage, 
+    //     $page=0,
+    //     $join
+    // ));echo "</pre>";
+    
+    // echo "<pre>";print_r($this->params);echo"</pre>";
+    // die();
      $this->view->nextnumber = $listPerPage * ($this->params['page'] - 1);
      //echo $this->news->getSql();
 	 

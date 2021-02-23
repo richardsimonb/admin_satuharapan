@@ -1,4 +1,4 @@
-<?
+<?php
 class staff_IndexController extends Ext_Controller_Action 
 {
   function init()
@@ -21,7 +21,6 @@ class staff_IndexController extends Ext_Controller_Action
     {
     
         $user = $this->feusers->fetchRow("username='". $this->params['username'] ."' AND password='".$this->params['password']."' AND disable=0");
-		//die();
         if($user){
             $this->session->user = $user->toArray();
             $this->_redirect('/news');
@@ -48,7 +47,9 @@ class staff_IndexController extends Ext_Controller_Action
 			break;
 		}
 		exit();
-	}
+    }
+    
+
 	 $listPerPage=50; 
      $where = array();
 	 if(isset($this->params['category']))
@@ -64,14 +65,32 @@ class staff_IndexController extends Ext_Controller_Action
 	 	$where[] = "usergroup != 3";
 	 }
      $where[] = "feuser.deleted=0";
-     $where[] = "feuser.uid !=".$this->session->user['uid'];
+    $where[] = "feuser.uid !=".$this->session->user['uid'];
+    //$where[] = "feuser.uid !=900";
      $join = array('group'=>'left');
 	 
      $orderByField = array("uid DESC");
 	 
      $this->params['page']=isset($this->params['page']) ? $this->params['page'] : 0;
 	 $offset = $this->params['page'];
-	 
+     
+    //  echo "<pre>";print_r($where);echo"</pre>";
+    //  echo "<pre>";print_r($orderByField);echo"</pre>";
+    //  echo "<pre>";print_r($offset);echo"</pre>";
+    //  echo "<pre>";print_r($listPerPage);echo"</pre>";
+    //  echo "<pre>";print_r($join);echo"</pre>";
+    //  //echo "<pre>";print_r($where);echo"</pre>";
+    //  die("asd");
+
+
+    // echo "<pre>";print_r($this->feusers->getList(
+    //     $selectField=array(), 
+    //     $objectRelation=array(),
+    //     $where
+
+    // ));echo"</pre>"; 
+    // die();
+
 	 $rows  = $this->feusers->getList(
 												 $selectField=array(), 
 												 $objectRelation=array(), 
@@ -84,6 +103,8 @@ class staff_IndexController extends Ext_Controller_Action
 											 );
                                              
     
+    //  echo "<pre>";print_r($rows);echo"</pre>";
+    //  die("asd");        
      foreach($rows as $k=>$row)
      {
         $where = array();
@@ -209,5 +230,4 @@ class staff_IndexController extends Ext_Controller_Action
 	//$this->_redirect('/news');
   }
 } //end class
-
 ?>

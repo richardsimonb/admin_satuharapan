@@ -1,8 +1,6 @@
-<?
-
-class Ext_Plugins_Layout extends Zend_Controller_Plugin_Abstract
-{
-
+<?php 
+class Ext_Plugins_Layout extends Zend_Controller_Plugin_Abstract {
+	
     public function preDispatch(Zend_Controller_Request_Abstract $request)
     {
         $config = Zend_Registry::get('config');
@@ -54,4 +52,6 @@ class Ext_Plugins_Layout extends Zend_Controller_Plugin_Abstract
         $layout->setLayout($htmlFile)->setLayoutPath($tmplPath);        
         Zend_Controller_Action_HelperBroker::addPath( $_SERVER['DOCUMENT_ROOT'].$config['frontController']['baseUrl'] .'/application/system/pages/views/helpers', 'Helper');
     }
+	
 }
+?>

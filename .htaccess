@@ -1,0 +1,59 @@
+#RewriteEngine on
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^(.*)$ index.php/$1
+#php_flag magic_quotes_gpc off
+#php_flag register_globals off
+
+RewriteEngine On
+
+Options +FollowSymlinks
+
+# Prevent Directoy listing 
+Options -Indexes
+
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301]
+
+#RewriteBase /_admin_/
+
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^.*$ index.php [NC,L]
+
+#<IfModule mod_headers.c>
+#  <FilesMatch "\.(js|css|xml|gz)$">
+#    Header append Vary Accept-Encoding
+#  </FilesMatch>
+#   Header set Connection keep-alive
+#</IfModule>
+#<IfModule mod_deflate.c>
+#	AddOutputFilterByType DEFLATE text/css text/javascript application/x-javascript application/javascript text/x-component text/html text/richtext image/svg+xml text/plain text/xsd text/xsl text/xml image/x-icon application/json
+#</IfModule>
+
+#<IfModule mod_expires.c>
+#ExpiresActive On
+#ExpiresDefault A86400
+#ExpiresByType image/x-icon A2419200
+#ExpiresByType image/gif A604800
+#ExpiresByType image/png A604800
+#ExpiresByType image/jpeg A604800
+#ExpiresByType text/css A604800
+#ExpiresByType application/x-javascript A604800
+#ExpiresByType text/plain A604800
+#ExpiresByType application/x-shockwave-flash A604800
+#ExpiresByType application/pdf A604800
+#ExpiresByType text/html A900
+#</IfModule>
+#<FilesMatch "\.js\.gzip$">
+#	AddType "text/javascript" .gzip
+#</FilesMatch>
+#<FilesMatch "\.css\.gzip$">
+#	AddType "text/css" .gzip
+#</FilesMatch>
+#AddEncoding gzip .gzip
+
+#order deny,allow
+#deny from all
+#allow from 203.142.86.229

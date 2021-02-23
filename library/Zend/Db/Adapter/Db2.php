@@ -66,7 +66,7 @@ class Zend_Db_Adapter_Db2 extends Zend_Db_Adapter_Abstract
         'dbname'       => null,
         'username'     => null,
         'password'     => null,
-        'host'         => '10.0.0.5',
+        'host'         => '192.168.30.6',
         'port'         => '50000',
         'protocol'     => 'TCPIP',
         'persistent'   => false,

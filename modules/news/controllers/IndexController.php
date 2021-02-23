@@ -679,7 +679,7 @@ class news_IndexController extends Ext_Controller_Action
         $update = $this->news->update($arrUpdate,"uid=".$this->params['uid']);
         if($update)
         {
-            unlink($_SERVER['DOCUMENT_ROOT'].'/uploads/pics/'.$this->params['filename']);
+            //unlink($_SERVER['DOCUMENT_ROOT'].'/uploads/pics/'.$this->params['filename']);
         }
         
     }

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.12, created on 2018-05-22 10:54:04
+<?php /* Smarty version Smarty-3.1.12, created on 2021-03-21 15:46:47
          compiled from "modules/news/views/templates/index/new.html" */ ?>
 <?php /*%%SmartyHeaderCode:680664775513b09c0859bc5-44072510%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '68db831cf05b61847cec98c74fd0fa524aba0883' => 
     array (
       0 => 'modules/news/views/templates/index/new.html',
-      1 => 1526744451,
+      1 => 1616316398,
       2 => 'file',
     ),
   ),
@@ -48,17 +48,16 @@ js/ckeditor/ckeditor.js"></script>
  CKEDITOR.replace( 'editor1',
                 {
                     filebrowserBrowseUrl        : '<?php echo $_smarty_tpl->tpl_vars['tplpath']->value;?>
-js/ckeditor/filemanager/browser/default/browser.html?Connector=http://www.satuharapan.com/ajax/filemanager/connectors/php/connector.php',
+js/ckeditor/filemanager/browser/default/browser.html?Connector=<?php echo $_smarty_tpl->tpl_vars['tplpath']->value;?>
+js/ckeditor/filemanager/connectors/php/connector.php',
                     filebrowserImageBrowseUrl   : '<?php echo $_smarty_tpl->tpl_vars['tplpath']->value;?>
-js/ckeditor/filemanager/browser/default/browser.html?Type=Image&Connector=http://www.satuharapan.com/ajax/filemanager/connectors/php/connector.php',
-                    filebrowserFlashBrowseUrl   : '<?php echo $_smarty_tpl->tpl_vars['tplpath']->value;?>
-js/ckeditor/filemanager/browser/default/browser.html?Type=Flash&Connector=http://www.satuharapan.com/ajax/filemanager/connectors/php/connector.php',
+js/ckeditor/filemanager/browser/default/browser.html?Type=Image&Connector=<?php echo $_smarty_tpl->tpl_vars['tplpath']->value;?>
+js/ckeditor/filemanager/connectors/php/connector.php',
+                    
                     filebrowserUploadUrl        : '<?php echo $_smarty_tpl->tpl_vars['tplpath']->value;?>
 js/ckeditor/filemanager/connectors/php/upload.php?Type=File',
                     filebrowserImageUploadUrl   : '<?php echo $_smarty_tpl->tpl_vars['tplpath']->value;?>
 js/ckeditor/filemanager/connectors/php/upload.php?Type=Image',
-                    filebrowserFlashUploadUrl   : '<?php echo $_smarty_tpl->tpl_vars['tplpath']->value;?>
-js/ckeditor/filemanager/connectors/php/upload.php?Type=Flash',
                     
                     toolbar: [
                   [ 'Source', '-', 'NewPage', 'Preview', '-', 'Templates' ], // Defines toolbar group with name (used to create voice label) and items in 3 subgroups.
@@ -77,4 +76,5 @@ js/ckeditor/filemanager/connectors/php/upload.php?Type=Flash',
                 
                 //]]>
  </script>
+
 <?php }} ?>

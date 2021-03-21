@@ -1,5 +1,2 @@
-RewriteEngine On
-
-RewriteBase /
-
-#allow from all
+RewriteEngine Off
+allow from all

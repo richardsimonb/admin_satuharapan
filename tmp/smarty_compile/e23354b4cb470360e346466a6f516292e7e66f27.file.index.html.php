@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.12, created on 2019-09-10 16:10:31
+<?php /* Smarty version Smarty-3.1.12, created on 2021-03-21 12:03:41
          compiled from "modules/staff/views/templates/index/index.html" */ ?>
 <?php /*%%SmartyHeaderCode:683308901513b132ff222e0-77587443%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e23354b4cb470360e346466a6f516292e7e66f27' => 
     array (
       0 => 'modules/staff/views/templates/index/index.html',
-      1 => 1568106561,
+      1 => 1616302881,
       2 => 'file',
     ),
   ),
@@ -40,7 +40,7 @@ css/warning.css" rel="stylesheet" type="text/css" />
 <body onload="javascript:setFocus()" id="login" class="blue">
 <div id="login-wrapper">
   <div id="login-top">
-    <div id="logo"> <img src="http://www.satuharapan.com/fileadmin/templates/new/images/logo2018.png" /> </div>
+    <div id="logo"> <img src="https://www.satuharapan.com/fileadmin/templates/new/images/logo2018.png" /> </div>
   </div>
   <div id="login-content">
     <form action="" method="post" name="login" id="form-login" style="clear: both;">

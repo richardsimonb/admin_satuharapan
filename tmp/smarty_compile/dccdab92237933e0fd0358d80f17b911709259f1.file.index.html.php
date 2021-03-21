@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.12, created on 2019-09-10 18:28:27
+<?php /* Smarty version Smarty-3.1.12, created on 2021-03-21 11:15:30
          compiled from "templates/frontend/index.html" */ ?>
 <?php /*%%SmartyHeaderCode:1612979755513b099bd50204-30673205%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dccdab92237933e0fd0358d80f17b911709259f1' => 
     array (
       0 => 'templates/frontend/index.html',
-      1 => 1568114902,
+      1 => 1616300123,
       2 => 'file',
     ),
   ),
@@ -102,7 +102,7 @@ js/bootstrap-typeahead.js"></script>
 js/jquery.validate.min.js"></script>
     <!--<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['tplpath']->value;?>
 css/jquery-ui.1.9.2.css" />-->
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
     
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['tplpath']->value;?>
 css/jquery-ui-timepicker-addon.css" />
@@ -110,7 +110,7 @@ css/jquery-ui-timepicker-addon.css" />
 js/select2/select2.css" />
     <!--<script src="<?php echo $_smarty_tpl->tpl_vars['tplpath']->value;?>
 js/jquery-ui-1.9.2.js"></script>-->
-    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
     <script src="<?php echo $_smarty_tpl->tpl_vars['tplpath']->value;?>
 js/jquery-ui-timepicker-addon.js"></script>
     
@@ -194,7 +194,7 @@ images/typo3logo-white.png" />
       <hr class="hr-footer">
 
       <footer>
-        <p>Copyright © 2012-2019 | satuharapan.com</p>
+        <p>Copyright © 2012-2021 | satuharapan.com</p>
       </footer>
 
     </div> <!-- /container -->

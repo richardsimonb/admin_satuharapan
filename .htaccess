@@ -11,8 +11,8 @@ Options +FollowSymlinks
 # Prevent Directoy listing 
 Options -Indexes
 
-#RewriteCond %{HTTP_HOST} !^www\.
-#RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301]
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301]
 
 #RewriteBase /_admin_/
 

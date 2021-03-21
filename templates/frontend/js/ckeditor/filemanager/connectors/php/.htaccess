@@ -1,2 +1,2 @@
-RewriteEngine Off
-allow from all
+#RewriteEngine Off
+#allow from all
